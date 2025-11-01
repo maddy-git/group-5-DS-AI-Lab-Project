@@ -7,9 +7,10 @@ user_input = st.text_input("Ask your question:", placeholder="e.g., What goes we
 
 if st.button("Ask"):
     with st.spinner("Thinking..."):
-        res = requests.post("http://localhost:5000/chat", json={"query": user_input})
+        res = requests.post("http://127.0.0.1:5000/query", json={"query": user_input})
         if res.status_code == 200:
             answer = res.json().get("response", "")
+            print(res.json())
             st.markdown(f"**AI Stylist:** {answer}")
         else:
             st.error("Something went wrong. Check backend logs.")
