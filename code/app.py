@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 import os
 
+os.getcwd()+"/api_key.txt"
 GROQ_API_KEY = os.environ.get("GROQ_API_KEY", "g")
 GROQ_MODEL = "mixtral-8x7b-8k" # Fast and powerful model on Groq
 EMBEDDING_MODEL_NAME = "BAAI/bge-base-en-v1.5" # The requested model for embeddings
