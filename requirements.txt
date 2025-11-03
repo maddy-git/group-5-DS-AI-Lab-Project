@@ -1,0 +1,17 @@
+flask
+requests
+streamlit
+PyMuPDF
+sentence-transformers
+scikit-learn
+groq
+faiss-cpu
+numpy
+pandas
+chromadb
+langchain-core
+langchain-community
+langchain-google-genai
+langchain-groq
+langchain-classic
+pydantic

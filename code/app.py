@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify
 import os
+from chat_flow import trigger_flow
 
 os.getcwd()+"/api_key.txt"
 GROQ_API_KEY = os.environ.get("GROQ_API_KEY", "g")
@@ -14,6 +15,7 @@ def handle_query():
     data = request.get_json()
     print(data)
     user_query = data.get('query')
+    trigger_flow(user_query)
     return jsonify({"response": user_query}),200
 
 if __name__ == '__main__':
