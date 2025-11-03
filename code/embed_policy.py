@@ -1,5 +1,7 @@
 import fitz # PyMuPDF
 import os 
+import chromadb
+
 
 def extract_text_from_pdf(pdf_path):
     """Extracts text from a PDF file."""
@@ -15,7 +17,7 @@ pdf_text = extract_text_from_pdf(pdf_path)
 
 print(f"Extracted {len(pdf_text)} characters from the PDF.")
 
-
+client = chromadb.PersistentClient(path="./chroma_db_storage")
 from sentence_transformers import SentenceTransformer
 import torch
 
@@ -27,11 +29,6 @@ model = SentenceTransformer(model_name)
 embeddings = model.encode(pdf_text, convert_to_tensor=True)
 
 print(f"Generated embeddings with shape: {embeddings.shape}")
-
-import chromadb
-
-# Instantiate a Chroma DB client in memory
-client = chromadb.Client()
 
 # Create a collection named 'faq_and_policy'
 collection = client.get_or_create_collection(name='faq_and_policy')
@@ -65,4 +62,3 @@ collection.add(
 print(f"Added {len(text_chunks)} chunks to the collection.")
 
 
-client = chromadb.PersistentClient(path="./chroma_db_storage")
