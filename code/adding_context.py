@@ -1,4 +1,5 @@
 import pandas as pd
+from constants import *
 
 def build_customer_context(cust_id: int):
     """
@@ -10,9 +11,9 @@ def build_customer_context(cust_id: int):
     """
 
     # --- Load required datasets ---
-    customers = pd.read_csv("/content/customers_first_3000.csv")
-    transactions = pd.read_csv("/content/transactions_first_3000_customers.csv")
-    cloth_data = pd.read_csv("/content/cloth_products_for_3000_customers.csv")
+    customers = pd.read_csv(customers_dir)
+    transactions = pd.read_csv(transactions_dir)
+    cloth_data = pd.read_csv(product_dir)
 
     # --- Ensure data consistency ---
     customers["cust_id"] = pd.to_numeric(customers["cust_id"], errors="coerce").astype("Int64")

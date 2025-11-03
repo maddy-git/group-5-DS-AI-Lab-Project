@@ -1,4 +1,6 @@
 import pandas as pd
+from base_llm import llm
+from constants import *
 
 def build_customer_context(cust_id: int):
     """
@@ -10,9 +12,9 @@ def build_customer_context(cust_id: int):
     """
 
     # --- Load required datasets ---
-    customers = pd.read_csv("/content/customers_first_3000.csv")
-    transactions = pd.read_csv("/content/transactions_first_3000_customers.csv")
-    cloth_data = pd.read_csv("/content/cloth_products_for_3000_customers.csv")
+    customers = pd.read_csv(customers_dir)
+    transactions = pd.read_csv(transactions_dir)
+    cloth_data = pd.read_csv(product_dir)
 
     # --- Ensure data consistency ---
     customers["cust_id"] = pd.to_numeric(customers["cust_id"], errors="coerce").astype("Int64")
@@ -73,12 +75,12 @@ def build_customer_context(cust_id: int):
     print(f"✅ Context successfully created for customer {cust_id}")
     return context
 
-# --- Example Usage ---
-cust_id = 5
-context = build_customer_context(cust_id)
-
-# Display context neatly
-print("\n".join(context))
+# # --- Example Usage ---
+# cust_id = 5
+# context = build_customer_context(cust_id)
+#
+# # Display context neatly
+# print("\n".join(context))
 
 
 
@@ -102,7 +104,7 @@ from sentence_transformers import SentenceTransformer, util
 from langchain_core.prompts import ChatPromptTemplate
 
 # --- Step 1: Load embedded product dataset ---
-cloth_data = pd.read_parquet("/content/cloth_products_bge_embedded.parquet")
+cloth_data = pd.read_parquet(product_embedding_dir)
 
 # Load the same embedding model used for embeddings
 model = SentenceTransformer("BAAI/bge-small-en")
@@ -207,21 +209,14 @@ def search_products(customer_query: str, cust_id: int, top_k: int = 20):
     ]]
 
 
-# --- Step 4: Example Usage ---
-customer_query = "show me something for office wear"
-cust_id = 5  # 👈 change to any valid customer ID
-
-top_products = search_products(customer_query, cust_id, top_k=20)
-
-print("\n👕 Top 20 Recommended Products:\n")
-print(top_products.to_string(index=False))
-
-
-
-
-
-
-
+# # --- Step 4: Example Usage ---
+# customer_query = "show me something for office wear"
+# cust_id = 5  # 👈 change to any valid customer ID
+#
+# top_products = search_products(customer_query, cust_id, top_k=20)
+#
+# print("\n👕 Top 20 Recommended Products:\n")
+# print(top_products.to_string(index=False))
 
 
 
@@ -307,9 +302,9 @@ def recommend_top3_structured(customer_query: str, cust_id: int, top_products_df
     return response.content
 
 
-# --- Step 3: Example Usage ---
-customer_query = "show me something for office wear"
-cust_id = 5  # example customer
-
-# assuming `top_products` is your 20-product dataframe from `search_products()`
-recommend_top3_structured(customer_query, cust_id, top_products)
+# # --- Step 3: Example Usage ---
+# customer_query = "show me something for office wear"
+# cust_id = 5  # example customer
+#
+# # assuming `top_products` is your 20-product dataframe from `search_products()`
+# recommend_top3_structured(customer_query, cust_id, top_products)

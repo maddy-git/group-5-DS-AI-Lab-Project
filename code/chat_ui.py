@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 
-st.title("👗 AI Fashion Chatbot (RAG + Groq)")
+st.title("👗 AI Fashion Chatbot")
 
 user_input = st.text_input("Ask your question:", placeholder="e.g., What goes well with a red shirt for summer?")
 

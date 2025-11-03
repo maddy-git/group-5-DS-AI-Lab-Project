@@ -1,12 +1,7 @@
-import os
 from typing import Literal
-from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate,MessagesPlaceholder
 from pydantic.v1 import BaseModel, Field
-
-os.environ["GOOGLE_API_KEY"] = "AIzaSyBfCV-TobP0xCdhrLvcZwbjSrIWjo03CX8"
-
-llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=0)
+from base_llm import llm
 
 
 class QueryClassification(BaseModel):
@@ -41,4 +36,4 @@ prompt = ChatPromptTemplate.from_messages([
 classifier_chain = prompt | structured_llm
 
 def classify_query(query, history):
-    classifier_chain.invoke({"query": query, "chat_history": history})
+    return classifier_chain.invoke({"query": query, "chat_history": history}).classification
