@@ -108,7 +108,7 @@ def handle_feedback_and_retrieve(
     print("\n👕 New Top 20 Recommendations After Feedback:\n")
     print(top20_updated.to_string(index=False))
 
-    return refined_query, top20_updated, top3
+    return refined_query, top20_updated
 
 
 # --- Step 3: Example Workflow ---
