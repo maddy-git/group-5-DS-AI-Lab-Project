@@ -14,11 +14,19 @@ def build_customer_context(cust_id: int):
     transactions = pd.read_csv("/content/transactions_first_3000_customers.csv")
     cloth_data = pd.read_csv("/content/cloth_products_for_3000_customers.csv")
 
+    # --- Ensure data consistency ---
+    customers["cust_id"] = pd.to_numeric(customers["cust_id"], errors="coerce").astype("Int64")
+    transactions["cust_id"] = pd.to_numeric(transactions["cust_id"], errors="coerce").astype("Int64")
+
     # --- Initialize context ---
     context = []
 
     # --- CUSTOMER INFO ---
-    if cust_id not in customers["cust_id"].values:
+    # ✅ Ensure cust_id type matches dataset column
+    cust_id = int(cust_id)
+    customer_ids = customers["cust_id"].dropna().astype(int).values
+
+    if cust_id not in customer_ids:
         return [f"❌ Customer ID {cust_id} not found in dataset."]
 
     customer_info = customers[customers["cust_id"] == cust_id].iloc[0]
@@ -57,9 +65,7 @@ def build_customer_context(cust_id: int):
         context.append("No product details found for this customer's purchases.")
     else:
         for i, row in purchased_products.iterrows():
-            prod_details = ", ".join([
-                f"{col}: {row[col]}" for col in purchased_products.columns
-            ])
+            prod_details = ", ".join([f"{col}: {row[col]}" for col in purchased_products.columns])
             context.append(f"Product {i}: {prod_details}")
 
     context.append("---------------------------")
@@ -67,13 +73,15 @@ def build_customer_context(cust_id: int):
     print(f"✅ Context successfully created for customer {cust_id}")
     return context
 
-
 # --- Example Usage ---
 cust_id = 5
 context = build_customer_context(cust_id)
 
 # Display context neatly
 print("\n".join(context))
+
+
+
 
 
 
