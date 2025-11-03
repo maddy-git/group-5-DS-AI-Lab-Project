@@ -7,3 +7,11 @@
 ------------------------------------------------------------------
 ### Steps to run:-
 `command 1`
+
+
+pip install -r requirements.txt
+streamlit run chat_ui.py
+python app.py
+
+To login just type cust_id:{customer_id}
+To logout just type logout

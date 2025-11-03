@@ -2,11 +2,13 @@ from classify_query import classify_query
 from policy_llm import answer_policy_or_return_query
 from memory import *
 from product_finder_reranker import *
+from user_context_checker import handle_user_query
 
 memory = Memory()
 
 
 def trigger_flow(query):
+    #LOGIN LOGOUT
     if(query.startswith("cust_id:")):
         memory.refresh()
         memory.set_customer(query.split(":")[1])
@@ -15,6 +17,14 @@ def trigger_flow(query):
         memory.refresh()
         return "Logged out successfully"
 
+    #CHECKING AGE AND GENDER INFO
+    if(memory.get_customer() == -1):
+        response= handle_user_query(query, [], memory)
+        if("age" in response.lower() or "gender" in response.lower()):
+            memory.add_chat(query, response)
+            return response
+
+    #RAG
     llm_response = ""
     classification = classify_query(query, memory.get_history())
     if classification == "POLICY" or classification == "RETURN":
