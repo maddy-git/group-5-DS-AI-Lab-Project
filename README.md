@@ -10,9 +10,9 @@
 `command 1`
 
 
-pip install -r requirements.txt
-streamlit run chat_ui.py
-python app.py
+### pip install -r requirements.txt
+### streamlit run chat_ui.py
+### python app.py
 
-To login just type cust_id:{customer_id}
-To logout just type logout
+### To login just type cust_id:{customer_id}
+### To logout just type logout
