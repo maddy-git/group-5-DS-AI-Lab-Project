@@ -29,7 +29,7 @@ cust_id:{customer_id}
 ```
 logout
 ```
-
+---
 ### Tech Stack
 
 Python
