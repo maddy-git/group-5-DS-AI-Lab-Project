@@ -221,7 +221,6 @@ def search_products(customer_query: str, cust_id: int, top_k: int = 20):
 
 
 
-
 from langchain_core.prompts import ChatPromptTemplate
 import pandas as pd
 
@@ -248,7 +247,6 @@ the **user’s current query**, not their past purchases.
 
 ### RULES:
 1. Focus primarily on what the user is asking for *right now*.
-   (Example: if the query says “party outfit”, prioritize festive clothing even if the user usually buys formal wear.)
 2. Use context only to make small adjustments — e.g., color tone, gender fit, or preferred category.
 3. Return the final **top 3** products in the **same table format** as input (all columns intact).
 4. Do **not** add summaries or explanations — output only the structured rows.
@@ -271,7 +269,48 @@ Return exactly 3 product rows as a formatted table including all columns, preser
 rerank_chain = rerank_prompt | llm
 
 
-# --- Step 2: Function to rerank products using cust_id ---
+# ==========================================================
+# 🧩 Step 2: Add Structured Formatter
+# ==========================================================
+
+structured_response_prompt = ChatPromptTemplate.from_template("""
+You are a helpful fashion assistant that structures product data neatly for the customer.
+
+You are given a raw text table of the **Top 3 Recommended Products**.
+Extract and display the key product details in a clear, readable format.
+
+### Extract and show:
+- Product Name
+- Product Type
+- Color
+- Price (in INR)
+- Discount (%)
+- Return Type
+- SKU Number
+
+### Format Example:
+Product 1:
+• Name: ...
+• Type: ...
+• Color: ...
+• Price: ...
+• Discount: ...
+• Return Type: ...
+• SKU: ...
+
+### RAW INPUT
+{raw_top3}
+
+### OUTPUT
+Return only the structured formatted product list (no explanations, no extra text).
+""")
+
+structured_response_chain = structured_response_prompt | llm
+
+
+# ==========================================================
+# 🧠 Step 3: Main Function
+# ==========================================================
 def recommend_top3_structured(customer_query: str, cust_id: int, top_products_df):
     """
     Takes:
@@ -281,30 +320,41 @@ def recommend_top3_structured(customer_query: str, cust_id: int, top_products_df
     Builds:
       - context automatically using build_customer_context(cust_id)
     Returns:
-      - Top 3 products as structured table (string)
+      - Clean structured summary of top 3 products only
     """
 
-    # ✅ Import and build context dynamically
+    # ✅ Step 1: Build context dynamically
     context = build_customer_context(cust_id)
 
-    # ✅ Prepare top 20 table string
+    # ✅ Step 2: Prepare top 20 table
     top_20_str = top_products_df.to_string(index=False)
 
-    # ✅ LLM reranking
+    # ✅ Step 3: Use LLM reranker to find top 3
     response = rerank_chain.invoke({
         "context": "\n".join(context),
         "query": customer_query,
         "top_20": top_20_str
     })
 
-    print(f"\n🎯 Final Query-Dominant Top 3 for Customer {cust_id}:\n")
-    print(response.content)
-    return response.content
+    # Extract raw top 3
+    raw_top3_text = response.content.strip()
+
+    # ✅ Step 4: Generate structured summary
+    structured_output = structured_response_chain.invoke({
+        "raw_top3": raw_top3_text
+    })
+
+    # ✅ Step 5: Clean escaped newline characters and extra spaces
+    formatted_output = structured_output.content.replace("\\n", "\n").replace("\\t", "\t").strip()
+    print(formatted_output)
+    # ✅ Return only formatted structured summary
+    return f"\n{formatted_output}"
 
 
-# # --- Step 3: Example Usage ---
+# --- Step 4: Example Usage ---
 # customer_query = "show me something for office wear"
 # cust_id = 5  # example customer
 #
-# # assuming `top_products` is your 20-product dataframe from `search_products()`
-# recommend_top3_structured(customer_query, cust_id, top_products)
+# # assuming `top_products` is your 20-product dataframe from search_products()
+# final_output = recommend_top3_structured(customer_query, cust_id, top_products)
+# print(final_output)

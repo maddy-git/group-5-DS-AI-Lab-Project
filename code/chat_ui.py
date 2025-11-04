@@ -11,6 +11,6 @@ if st.button("Ask"):
         if res.status_code == 200:
             answer = res.json().get("response", "")
             print(res.json())
-            st.markdown(f"**AI Stylist:** {answer}")
+            st.text(f"{answer}")
         else:
             st.error("Something went wrong. Check backend logs.")
