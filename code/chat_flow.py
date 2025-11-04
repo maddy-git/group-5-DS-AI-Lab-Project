@@ -1,13 +1,15 @@
-from classify_query import classify_query
+from productRAG import classify_query, get_customer_context, findKBest, reranker
 from policy_llm import answer_policy_or_return_query
 from memory import *
-from product_finder_reranker import *
 from user_context_checker import handle_user_query
 
 memory = Memory()
 
 
 def trigger_flow(query):
+    print("Memory:")
+    print(memory.get_history())
+
     #LOGIN LOGOUT
     if(query.startswith("cust_id:")):
         memory.refresh()
@@ -26,12 +28,17 @@ def trigger_flow(query):
 
     #RAG
     llm_response = ""
-    classification = classify_query(query, memory.get_history())
+    classification = classify_query.classify_query(query, memory.get_history())
     if classification == "POLICY" or classification == "RETURN":
         llm_response = answer_policy_or_return_query(query, memory.get_history())
     elif classification == "PRODUCT_SEARCH":
-        top_products = search_products(query, memory.get_customer())
-        llm_response = recommend_top3_structured(query, memory.get_customer(), top_products)
+        if(memory.get_customer_context() == ""):
+            customer_context = get_customer_context.build_customer_context(memory.get_customer())
+            memory.set_customer_context(customer_context)
+        else:
+            customer_context = memory.get_customer_context()
+        top_products = findKBest.search_products(query, customer_context, memory.get_history())
+        llm_response = reranker.recommend_top3_structured(query, customer_context, memory.get_history(), top_products)
     else:
         llm_response = "I am a store assistant which helps you with shopping and store policies.\nPlease ask anything related to these."
 

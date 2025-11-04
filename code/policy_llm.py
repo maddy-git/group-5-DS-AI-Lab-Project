@@ -4,7 +4,7 @@ from sentence_transformers import SentenceTransformer
 
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate
-from base_llm import llm
+from productRAG.constants import llm
 
 EMBEDDING_MODEL_NAME = "BAAI/bge-base-en-v1.5" # The requested model for embeddings
 model = SentenceTransformer(EMBEDDING_MODEL_NAME)

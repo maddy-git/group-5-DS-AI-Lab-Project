@@ -1,19 +1,11 @@
 import pandas as pd
-from constants import *
+from . import constants
 
 def build_customer_context(cust_id: int):
-    """
-    Independent function — creates a complete context list for a customer.
-    Includes:
-      - Customer info (excluding 'size', 'cust_id', and 'embed_text')
-      - All related transactions
-      - All related product details
-    """
-
     # --- Load required datasets ---
-    customers = pd.read_csv(customers_dir)
-    transactions = pd.read_csv(transactions_dir)
-    cloth_data = pd.read_csv(product_dir)
+    customers = pd.read_csv(constants.customers_dir)
+    transactions = pd.read_csv(constants.transactions_dir)
+    cloth_data = pd.read_csv(constants.product_dir)
 
     # --- Ensure data consistency ---
     customers["cust_id"] = pd.to_numeric(customers["cust_id"], errors="coerce").astype("Int64")
@@ -28,7 +20,7 @@ def build_customer_context(cust_id: int):
     customer_ids = customers["cust_id"].dropna().astype(int).values
 
     if cust_id not in customer_ids:
-        return [f"❌ Customer ID {cust_id} not found in dataset."]
+        return f"❌ Customer ID {cust_id} not found in dataset."
 
     customer_info = customers[customers["cust_id"] == cust_id].iloc[0]
 
@@ -72,11 +64,10 @@ def build_customer_context(cust_id: int):
     context.append("---------------------------")
 
     print(f"✅ Context successfully created for customer {cust_id}")
-    return context
 
-# --- Example Usage ---
-cust_id = 5
-context = build_customer_context(cust_id)
+    formatted_context = ""
+    for cont in context:
+        formatted_context = formatted_context + cont + "\n"
 
-# Display context neatly
-print("\n".join(context))
+    print(formatted_context)
+    return formatted_context

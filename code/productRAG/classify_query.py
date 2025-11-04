@@ -1,8 +1,7 @@
 from typing import Literal
 from langchain_core.prompts import ChatPromptTemplate,MessagesPlaceholder
 from pydantic.v1 import BaseModel, Field
-from base_llm import llm
-
+from . import constants
 
 class QueryClassification(BaseModel):
     """The classification of the user's query."""
@@ -18,7 +17,7 @@ class QueryClassification(BaseModel):
     )
 
 
-structured_llm = llm.with_structured_output(QueryClassification)
+structured_llm = constants.llm.with_structured_output(QueryClassification)
 
 system_prompt = """You are a classifier for a fashion store chatbot. Your job is to categorize the user's query into one of four categories:
     1.  POLICY: For any questions about shipping, refunds, store policies, order status, or account issues.

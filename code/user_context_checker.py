@@ -1,5 +1,5 @@
 from langchain_core.prompts import ChatPromptTemplate
-from base_llm import llm
+from productRAG.constants import llm
 import json
 
 extract_prompt = ChatPromptTemplate.from_template("""
@@ -70,44 +70,3 @@ def handle_user_query(user_query, user_context, memory):
 
     print(f"🤖 Sufficiency check:\n{sufficiency_check.content}\n")
     return sufficiency_check.content
-
-    # # Step 4: Decide reply
-    # if "ask" in sufficiency_check.content.lower() or "provide" in sufficiency_check.content.lower():
-    #     return sufficiency_check.content, user_context
-    # else:
-    #     # If sufficient info, just echo or respond normally
-    #     if user_query.lower() in ["hi", "hello", "hey"]:
-    #         return "Hello! 👋", user_context
-    #     else:
-    #         return f"You said: {user_query}", user_context
-
-
-# # --- Step 4: Test flow ---
-# context = [
-#     "--- CUSTOMER CONTEXT ---",
-#     "Age: ",      # missing initially
-#     "Gender: ",   # missing initially
-#     "---------------------------"
-# ]
-#
-# memory = Memory()
-#
-# # 1️⃣ User says hi
-# print("👤 User: hi\n")
-# response, context = handle_user_query("hi", context, memory)
-# print("💬 Bot:", response, "\n")
-#
-# # 2️⃣ User provides partial info
-# print("👤 User: my gender is female\n")
-# response, context = handle_user_query("my gender is female", context, memory)
-# print("💬 Bot:", response, "\n")
-#
-# # 3️⃣ User provides remaining info
-# print("👤 User: I am 24 years old\n")
-# response, context = handle_user_query("I am 24 years old", context, memory)
-# print("💬 Bot:", response, "\n")
-#
-# # 4️⃣ User says something again
-# print("👤 User: hello\n")
-# response, context = handle_user_query("hello", context, memory)
-# print("💬 Bot:", response, "\n")

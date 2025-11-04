@@ -1,6 +1,7 @@
 import fitz # PyMuPDF
 import os 
 import chromadb
+from sentence_transformers import SentenceTransformer
 
 
 def extract_text_from_pdf(pdf_path):
@@ -18,8 +19,6 @@ pdf_text = extract_text_from_pdf(pdf_path)
 print(f"Extracted {len(pdf_text)} characters from the PDF.")
 
 client = chromadb.PersistentClient(path="./chroma_db_storage")
-from sentence_transformers import SentenceTransformer
-import torch
 
 # Load the embedding model
 model_name = "BAAI/bge-base-en-v1.5"
