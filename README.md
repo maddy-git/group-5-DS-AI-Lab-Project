@@ -16,6 +16,7 @@ It embeds product descriptions, stores them in **FAISS**, and retrieves the most
 
 ```bash
 pip install -r requirements.txt
+cd code
 streamlit run chat_ui.py
 python app.py
 ```
