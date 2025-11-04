@@ -44,7 +44,7 @@ Embedding Model (e.g., Sentence Transformers)
 
 LLM (e.g., GPT / Gemini)
 
-
+---
 ## Note
 
 This project is part of the IIT Madras BS in Data Science and Applications course.
