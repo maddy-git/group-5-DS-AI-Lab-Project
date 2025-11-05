@@ -1,0 +1,1174 @@
+Temp: 0.2
+Top-K: 5
+Refine Prompt: refine_prompt_contextual
+Rerank Prompt: rerank_prompt_contextual
+Query1: 
+
+Product 1:
+• Name: SAILOR FRONT PRINT
+• Type: Sweater
+• Color: Red
+• Price: 3821 INR
+• Discount: 28%
+• Return Type: 7 days return
+• SKU: N/A
+
+Product 2:
+• Name: CORN CLASSIC TEE
+• Type: T-shirt
+• Color: Dark Grey
+• Price: 3157 INR
+• Discount: 24%
+• Return Type: No return
+• SKU: N/A
+
+Product 3:
+• Name: SPEED Paprika
+• Type: Sweater
+• Color: Grey
+• Price: 2533 INR
+• Discount: 53%
+• Return Type: 15 days return
+• SKU: N/A
+_______________________
+Query2: 
+
+Product 1:
+• Name: Retro Slim
+• Type: Denim trousers
+• Color: Blue
+• Price: 2189 INR
+• Discount: 7%
+• Return Type: 7 days return
+• SKU: N/A
+
+Product 2:
+• Name: Skinny 5pkt Midnight
+• Type: Denim trousers
+• Color: Dark Blue
+• Price: 1523 INR
+• Discount: 64%
+• Return Type: 15 days return
+• SKU: N/A
+
+Product 3:
+• Name: Skinny 5pkt Trash 1
+• Type: Denim trousers
+• Color: Blue
+• Price: 703 INR
+• Discount: 62%
+• Return Type: 7 days return
+• SKU: N/A
+_______________________
+Query3: 
+
+Product 1:
+• Name: Skinny 5pkt Midnight
+• Type: Trousers
+• Color: Dark Blue
+• Price: 1523 INR
+• Discount: 64%
+• Return Type: 15 days return
+
+Product 2:
+• Name: Retro Slim
+• Type: Trousers
+• Color: Blue
+• Price: 2189 INR
+• Discount: 7%
+• Return Type: 7 days return
+
+Product 3:
+• Name: Slim Straight 5pkt 1
+• Type: Trousers
+• Color: Light Blue
+• Price: 3232 INR
+• Discount: 58%
+• Return Type: 7 days return
+_______________________
+Query4: 
+
+Product 1:
+• Name: SAILOR FRONT PRINT
+• Type: Sweater
+• Color: Red
+• Price: 3821 INR
+• Discount: 28%
+• Return Type: 7 days return
+• SKU: N/A
+
+Product 2:
+• Name: Rosie blouse
+• Type: Blouse
+• Color: Black
+• Price: 1096 INR
+• Discount: 39%
+• Return Type: 15 days return
+• SKU: N/A
+
+Product 3:
+• Name: SPEED Paprika
+• Type: Sweater
+• Color: Grey
+• Price: 2533 INR
+• Discount: 53%
+• Return Type: 15 days return
+• SKU: N/A
+_______________________
+Query5: 
+
+Product 1:
+• Name: Sam ls bd detailed
+• Type: Shirt
+• Color: Light Blue
+• Price: 4646 INR
+• Discount: 40%
+• Return Type: 7 days return
+• SKU: N/A
+
+Product 2:
+• Name: Pat ls bd oxford solid
+• Type: Shirt
+• Color: Black
+• Price: 3504 INR
+• Discount: 47%
+• Return Type: 15 days return
+• SKU: N/A
+
+Product 3:
+• Name: Gary Tee
+• Type: T-shirt
+• Color: White
+• Price: 2398 INR
+• Discount: 0%
+• Return Type: 15 days return
+• SKU: N/A
+_______________________
+Query6: 
+
+Product 1:
+• Name: SPEED Paprika
+• Type: Sweater
+• Color: Grey
+• Price: 2533 INR
+• Discount: 53%
+• Return Type: 15 days return
+• SKU: N/A
+
+Product 2:
+• Name: Smile
+• Type: Sweater
+• Color: Black
+• Price: 1799 INR
+• Discount: 26%
+• Return Type: 7 days return
+• SKU: N/A
+
+Product 3:
+• Name: Leo seamless t-shirt (1)
+• Type: T-shirt
+• Color: Dark Blue
+• Price: 1311 INR
+• Discount: 65%
+• Return Type: 7 days return
+• SKU: N/A
+_______________________
+Query7: 
+
+Product 1:
+• Name: Rawley Chinos Slim
+• Type: Trousers
+• Color: Yellowish Brown
+• Price: 4843 INR
+• Discount: 14%
+• Return Type: No return
+• SKU: Not available
+
+Product 2:
+• Name: Heath
+• Type: Trousers
+• Color: Dark Turquoise
+• Price: 575 INR
+• Discount: 61%
+• Return Type: 15 days return
+• SKU: Not available
+
+Product 3:
+• Name: Sam ss
+• Type: Shirt
+• Color: Off White
+• Price: 2136 INR
+• Discount: 48%
+• Return Type: No return
+• SKU: Not available
+_______________________
+Query8: 
+
+Product 1:
+• Name: Bernie
+• Type: Top
+• Color: Light Blue
+• Price: 902 INR
+• Discount: 47%
+• Return Type: 15 days return
+• SKU: N/A
+
+Product 2:
+• Name: Paris graphic sweater
+• Type: Sweater
+• Color: Other Blue
+• Price: 745 INR
+• Discount: 48%
+• Return Type: 7 days return
+• SKU: N/A
+
+Product 3:
+• Name: SPEED Paprika
+• Type: Sweater
+• Color: Black
+• Price: 665 INR
+• Discount: 34%
+• Return Type: 15 days return
+• SKU: N/A
+_______________________
+Query9: 
+
+Product 1:
+• Name: Sam
+• Type: Dress
+• Color: Off White
+• Price: 3797 INR
+• Discount: 41%
+• Return Type: 15 days return
+• SKU: N/A
+
+Product 2:
+• Name: Topi dress J
+• Type: Dress
+• Color: Black
+• Price: 4416 INR
+• Discount: 67%
+• Return Type: No return
+• SKU: N/A
+
+Product 3:
+• Name: April
+• Type: Skirt
+• Color: Dark Blue
+• Price: 4093 INR
+• Discount: 3%
+• Return Type: No return
+• SKU: N/A
+_______________________
+Query10: 
+
+Product 1:
+• Name: Hijack Top
+• Type: Top
+• Color: Off White
+• Price: 2352 INR
+• Discount: 33%
+• Return Type: 7 days return
+
+Product 2:
+• Name: Heaven Top
+• Type: Shirt
+• Color: Black
+• Price: 2532 INR
+• Discount: 6%
+• Return Type: No return
+
+Product 3:
+• Name: SPEED Paprika
+• Type: Sweater
+• Color: Grey
+• Price: 2533 INR
+• Discount: 53%
+• Return Type: 15 days return
+_______________________
+================================================================================================================================================
+Temp: 0
+Top-K: 10
+Refine Prompt: refine_prompt_precise
+Rerank Prompt: rerank_prompt_precise
+Query1: 
+
+Product 1:
+• Name: NILS
+• Type: Shirt
+• Color: Red
+• Price: 931 INR
+• Discount: 6%
+• Return Type: No return
+• SKU: N/A
+
+Product 2:
+• Name: R-NECK SS SLIM FIT
+• Type: T-shirt
+• Color: Dark Red
+• Price: 676 INR
+• Discount: 56%
+• Return Type: 7 days return
+• SKU: N/A
+
+Product 3:
+• Name: Gary Tee
+• Type: T-shirt
+• Color: White
+• Price: 2398 INR
+• Discount: 0%
+• Return Type: 15 days return
+• SKU: N/A
+_______________________
+Query2: 
+
+Product 1:
+• Name: Retro Slim
+• Type: Denim trousers
+• Color: Blue
+• Price: 2189 INR
+• Discount: 7%
+• Return Type: 7 days return
+• SKU: N/A
+
+Product 2:
+• Name: Skinny Tapered Medicine
+• Type: Denim trousers
+• Color: Blue
+• Price: 1561 INR
+• Discount: 38%
+• Return Type: No return
+• SKU: N/A
+
+Product 3:
+• Name: Super Skinny Lowprice
+• Type: Denim trousers
+• Color: Blue
+• Price: 3662 INR
+• Discount: 26%
+• Return Type: 7 days return
+• SKU: N/A
+_______________________
+Query3: 
+
+Product 1:
+• Name: Skinny 5pkt Premiumprice 1
+• Type: Trousers Garment Lower body
+• Color: Light Blue
+• Price: 979 INR
+• Discount: 67%
+• Return Type: 7 days return
+• SKU: N/A
+
+Product 2:
+• Name: Skinny 5pkt Premiumprice 1
+• Type: Trousers Garment Lower body
+• Color: Blue
+• Price: 1486 INR
+• Discount: 52%
+• Return Type: 15 days return
+• SKU: N/A
+
+Product 3:
+• Name: Skinny 5pkt Midnight
+• Type: Trousers Garment Lower body
+• Color: Dark Blue
+• Price: 1523 INR
+• Discount: 64%
+• Return Type: 15 days return
+• SKU: N/A
+_______________________
+Query4: 
+
+Product 1:
+• Name: SAILOR FRONT PRINT
+• Type: Sweater
+• Color: Red
+• Price: 3821 INR
+• Discount: 28%
+• Return Type: 7 days return
+• SKU: N/A
+
+Product 2:
+• Name: Yen.
+• Type: Blouse
+• Color: Red
+• Price: 3853 INR
+• Discount: 62%
+• Return Type: 15 days return
+• SKU: N/A
+
+Product 3:
+• Name: SAILOR FRONT PRINT
+• Type: Sweater
+• Color: White
+• Price: 2650 INR
+• Discount: 21%
+• Return Type: 15 days return
+• SKU: N/A
+_______________________
+Query5: 
+
+Product 1:
+• Name: CAGE SLIM EASY IRON US
+• Type: Shirt
+• Color: White
+• Price: 1922 INR
+• Discount: 49%
+• Return Type: 7 days return
+• SKU: N/A
+
+Product 2:
+• Name: Sam ls bd detailed
+• Type: Shirt
+• Color: Light Blue
+• Price: 4646 INR
+• Discount: 40%
+• Return Type: 7 days return
+• SKU: N/A
+
+Product 3:
+• Name: FRAME Easy Iron
+• Type: Shirt
+• Color: Dark Blue
+• Price: 4129 INR
+• Discount: 48%
+• Return Type: 15 days return
+• SKU: N/A
+_______________________
+Query6: 
+
+Product 1:
+• Name: Smile
+• Type: Sweater
+• Color: Black
+• Price: 1799 INR
+• Discount: 26%
+• Return Type: 7 days return
+• SKU: N/A
+
+Product 2:
+• Name: SPEED Paprika
+• Type: Sweater
+• Color: Grey
+• Price: 2533 INR
+• Discount: 53%
+• Return Type: 15 days return
+• SKU: N/A
+
+Product 3:
+• Name: SAILOR FRONT PRINT
+• Type: Sweater
+• Color: White
+• Price: 2650 INR
+• Discount: 21%
+• Return Type: 15 days return
+• SKU: N/A
+_______________________
+Query7: 
+
+Product 1:
+• Name: Rawley Chinos Slim
+• Type: Trousers
+• Color: Yellowish Brown
+• Price: 4843 INR
+• Discount: 14%
+• Return Type: No return
+• SKU: N/A
+
+Product 2:
+• Name: Reggie chino shorts
+• Type: Shorts
+• Color: Black
+• Price: 3165 INR
+• Discount: 7%
+• Return Type: No return
+• SKU: N/A
+
+Product 3:
+• Name: Pierce chino
+• Type: Trousers
+• Color: Dark Blue
+• Price: 3820 INR
+• Discount: 54%
+• Return Type: No return
+• SKU: N/A
+_______________________
+Query8: 
+
+Product 1:
+• Name: SPEED Paprika
+• Type: Sweater
+• Color: Black
+• Price: 665 INR
+• Discount: 34%
+• Return Type: 15 days return
+• SKU: N/A
+
+Product 2:
+• Name: Tulip jumper
+• Type: Sweater
+• Color: Dark Blue
+• Price: 795 INR
+• Discount: 55%
+• Return Type: 7 days return
+• SKU: N/A
+
+Product 3:
+• Name: Topi dress J
+• Type: Dress
+• Color: Black
+• Price: 4416 INR
+• Discount: 67%
+• Return Type: No return
+• SKU: N/A
+_______________________
+Query9: 
+
+Product 1:
+• Name: Topi dress J
+• Type: Dress
+• Color: Black
+• Price: 4416 INR
+• Discount: 67%
+• Return Type: No return
+• SKU: N/A
+
+Product 2:
+• Name: Sam
+• Type: Dress
+• Color: Off White
+• Price: 3797 INR
+• Discount: 41%
+• Return Type: 15 days return
+• SKU: N/A
+
+Product 3:
+• Name: Serrano
+• Type: Dress
+• Color: Dark Blue
+• Price: 1125 INR
+• Discount: 22%
+• Return Type: 15 days return
+• SKU: N/A
+_______________________
+Query10: 
+
+Product 1:
+• Name: CS Tiramisu
+• Type: Blouse
+• Color: Light Blue
+• Price: 1079 INR
+• Discount: 69%
+• Return Type: 7 days return
+• SKU: N/A
+
+Product 2:
+• Name: Hijack Top
+• Type: Top
+• Color: Off White
+• Price: 2352 INR
+• Discount: 33%
+• Return Type: 7 days return
+• SKU: N/A
+
+Product 3:
+• Name: ES Bibbi ls top
+• Type: Top
+• Color: White
+• Price: 3844 INR
+• Discount: 3%
+• Return Type: 7 days return
+• SKU: N/A
+_______________________
+================================================================================================================================================
+Temp: 0.5
+Top-K: 12
+Refine Prompt: refine_prompt_balanced
+Rerank Prompt: rerank_prompt_balanced
+Query1: 
+
+Product 1:
+• Name: NILS
+• Type: Shirt
+• Color: Red
+• Price: 931 INR
+• Discount: 6%
+• Return Type: No return
+• SKU: ...
+
+Product 2:
+• Name: SAILOR FRONT PRINT
+• Type: Sweater
+• Color: Red
+• Price: 3821 INR
+• Discount: 28%
+• Return Type: 7 days return
+• SKU: ...
+
+Product 3:
+• Name: CORN CLASSIC TEE
+• Type: T-shirt
+• Color: Dark Grey
+• Price: 3157 INR
+• Discount: 24%
+• Return Type: No return
+• SKU: ...
+_______________________
+Query2: 
+
+Product 1:
+• Name: Retro Slim
+• Type: Denim trousers
+• Color: Blue
+• Price: 2189 INR
+• Discount: 7%
+• Return Type: 7 days return
+• SKU: N/A
+
+Product 2:
+• Name: Skinny 5pkt Trash 1
+• Type: Denim trousers
+• Color: Blue
+• Price: 703 INR
+• Discount: 62%
+• Return Type: 7 days return
+• SKU: N/A
+
+Product 3:
+• Name: Skinny 5pkt Midnight
+• Type: Denim trousers
+• Color: Dark Blue
+• Price: 1523 INR
+• Discount: 64%
+• Return Type: 15 days return
+• SKU: N/A
+_______________________
+Query3: 
+
+Product 1:
+• Name: Skinny 5pkt Midnight
+• Type: Trousers
+• Color: Dark Blue
+• Price: 1523 INR
+• Discount: 64%
+• Return Type: 15 days return
+• SKU: N/A
+
+Product 2:
+• Name: Skinny 5pkt Premiumprice 1
+• Type: Trousers
+• Color: Blue
+• Price: 1486 INR
+• Discount: 52%
+• Return Type: 15 days return
+• SKU: N/A
+
+Product 3:
+• Name: Retro Slim
+• Type: Trousers
+• Color: Blue
+• Price: 2189 INR
+• Discount: 7%
+• Return Type: 7 days return
+• SKU: N/A
+_______________________
+Query4: 
+
+Product 1:
+• Name: SAILOR FRONT PRINT
+• Type: Sweater
+• Color: Red
+• Price: 3821 INR
+• Discount: 28%
+• Return Type: 7 days return
+• SKU: N/A
+
+Product 2:
+• Name: Rosie blouse
+• Type: Blouse
+• Color: Black
+• Price: 1096 INR
+• Discount: 39%
+• Return Type: 15 days return
+• SKU: N/A
+
+Product 3:
+• Name: SAILOR FRONT PRINT
+• Type: Sweater
+• Color: White
+• Price: 2650 INR
+• Discount: 21%
+• Return Type: 15 days return
+• SKU: N/A
+_______________________
+Query5: 
+
+Product 1:
+• Name: STYLO SLIM SHIRT
+• Type: Shirt
+• Color: White
+• Price: 4516 INR
+• Discount: 60%
+• Return Type: No return
+• SKU: N/A
+
+Product 2:
+• Name: Sam ls bd detailed
+• Type: Shirt
+• Color: Light Blue
+• Price: 4646 INR
+• Discount: 40%
+• Return Type: 7 days return
+• SKU: N/A
+
+Product 3:
+• Name: Pat ls bd oxford solid
+• Type: Shirt
+• Color: Black
+• Price: 3504 INR
+• Discount: 47%
+• Return Type: 15 days return
+• SKU: N/A
+_______________________
+Query6: 
+
+Product 1:
+• Name: Sam ls bd detailed
+• Type: Shirt
+• Color: Light Blue
+• Price: 4646 INR
+• Discount: 40%
+• Return Type: 7 days return
+• SKU: N/A
+
+Product 2:
+• Name: SPEED Paprika
+• Type: Sweater
+• Color: Grey
+• Price: 2533 INR
+• Discount: 53%
+• Return Type: 15 days return
+• SKU: N/A
+
+Product 3:
+• Name: SPEED Paprika
+• Type: Sweater
+• Color: Black
+• Price: 665 INR
+• Discount: 34%
+• Return Type: 15 days return
+• SKU: N/A
+_______________________
+Query7: 
+
+Product 1:
+• Name: Rawley Chinos Slim
+• Type: Trousers
+• Color: Yellowish Brown
+• Price: 4843 INR
+• Discount: 14%
+• Return Type: No return
+• SKU: N/A
+
+Product 2:
+• Name: Reggie chino shorts
+• Type: Shorts
+• Color: Black
+• Price: 3165 INR
+• Discount: 7%
+• Return Type: No return
+• SKU: N/A
+
+Product 3:
+• Name: Slim Straight 5pkt Midway 1
+• Type: Trousers
+• Color: Black
+• Price: 2323 INR
+• Discount: 67%
+• Return Type: 7 days return
+• SKU: N/A
+_______________________
+Query8: 
+
+Product 1:
+• Name: Bernie
+• Type: Top
+• Color: Light Blue
+• Price: 902 INR
+• Discount: 47%
+• Return Type: 15 days return
+• SKU: N/A
+
+Product 2:
+• Name: Tilda gatherings top
+• Type: Sweater
+• Color: White
+• Price: 3737 INR
+• Discount: 8%
+• Return Type: 15 days return
+• SKU: N/A
+
+Product 3:
+• Name: SPEED Paprika
+• Type: Sweater
+• Color: Black
+• Price: 665 INR
+• Discount: 34%
+• Return Type: 15 days return
+• SKU: N/A
+_______________________
+Query9: 
+
+Product 1:
+• Name: Topi dress J
+• Type: Dress
+• Color: Black
+• Price: 4416 INR
+• Discount: 67%
+• Return Type: No return
+• SKU: N/A
+
+Product 2:
+• Name: Polly Dress
+• Type: Dress
+• Color: Light Blue
+• Price: 546 INR
+• Discount: 41%
+• Return Type: 15 days return
+• SKU: N/A
+
+Product 3:
+• Name: Sam
+• Type: Dress
+• Color: Off White
+• Price: 3797 INR
+• Discount: 41%
+• Return Type: 15 days return
+• SKU: N/A
+_______________________
+Query10: 
+
+Product 1:
+• Name: Bernie
+• Type: Top Garment
+• Color: Light Blue
+• Price: 902 INR
+• Discount: 47%
+• Return Type: 15 days return
+• SKU: N/A
+
+Product 2:
+• Name: Tulip jumper
+• Type: Sweater Garment
+• Color: White
+• Price: 3965 INR
+• Discount: 14%
+• Return Type: No return
+• SKU: N/A
+
+Product 3:
+• Name: Tulip jumper
+• Type: Sweater Garment
+• Color: Grey
+• Price: 2708 INR
+• Discount: 35%
+• Return Type: 7 days return
+• SKU: N/A
+_______________________
+================================================================================================================================================
+Temp: 0.8
+Top-K: 20
+Refine Prompt: refine_prompt_creative
+Rerank Prompt: rerank_prompt_creative
+Query1: 
+
+Product 1:
+• Name: NILS
+• Type: Shirt
+• Color: Red
+• Price: 931 INR
+• Discount: 6%
+• Return Type: No return
+• SKU: N/A
+
+Product 2:
+• Name: London 9.99
+• Type: T-shirt
+• Color: Red
+• Price: 4730 INR
+• Discount: 11%
+• Return Type: 7 days return
+• SKU: N/A
+
+Product 3:
+• Name: R-NECK SS SLIM FIT
+• Type: T-shirt
+• Color: Dark Red
+• Price: 676 INR
+• Discount: 56%
+• Return Type: 7 days return
+• SKU: N/A
+_______________________
+Query2: 
+
+Product 1:
+• Name: Skinny 5pkt Premiumprice 1
+• Type: Trousers
+• Color: Light Blue
+• Price: 979 INR
+• Discount: 67%
+• Return Type: 7 days return
+• SKU: N/A
+
+Product 2:
+• Name: Skinny 5pkt Trash 1
+• Type: Trousers
+• Color: Blue
+• Price: 703 INR
+• Discount: 62%
+• Return Type: 7 days return
+• SKU: N/A
+
+Product 3:
+• Name: Skinny 5pkt Midnight
+• Type: Trousers
+• Color: Dark Blue
+• Price: 1523 INR
+• Discount: 64%
+• Return Type: 15 days return
+• SKU: N/A
+_______________________
+Query3: 
+
+Product 1:
+• Name: Skinny 5pkt Trash 1
+• Type: Trousers
+• Color: Blue
+• Price: 703 INR
+• Discount: 62%
+• Return Type: 7 days return
+• SKU: N/A
+
+Product 2:
+• Name: Skinny 5pkt Premiumprice 1
+• Type: Trousers
+• Color: Light Blue
+• Price: 979 INR
+• Discount: 67%
+• Return Type: 7 days return
+• SKU: N/A
+
+Product 3:
+• Name: Skinny 5pkt Premiumprice 1
+• Type: Trousers
+• Color: Blue
+• Price: 1486 INR
+• Discount: 52%
+• Return Type: 15 days return
+• SKU: N/A
+_______________________
+Query4: 
+
+Product 1:
+• Name: SAILOR FRONT PRINT
+• Type: Sweater
+• Color: Red
+• Price: 3821 INR
+• Discount: 28%
+• Return Type: 7 days return
+• SKU: N/A
+
+Product 2:
+• Name: EDC DONNA TOP
+• Type: Vest top
+• Color: Dark Red
+• Price: 1529 INR
+• Discount: 5%
+• Return Type: No return
+• SKU: N/A
+
+Product 3:
+• Name: Ariel boat neck (1)
+• Type: Top
+• Color: Dark Red
+• Price: 2197 INR
+• Discount: 15%
+• Return Type: 7 days return
+• SKU: N/A
+_______________________
+Query5: 
+
+Product 1:
+• Name: Sam ls bd detailed
+• Type: Shirt
+• Color: Light Blue
+• Price: 4646 INR
+• Discount: 40%
+• Return Type: 7 days return
+• SKU: N/A
+
+Product 2:
+• Name: BORIS SS SHIRT
+• Type: Shirt
+• Color: White
+• Price: 2169 INR
+• Discount: 34%
+• Return Type: 7 days return
+• SKU: N/A
+
+Product 3:
+• Name: OLIVER OXFORD SHIRT
+• Type: Shirt
+• Color: Dark Blue
+• Price: 4733 INR
+• Discount: 1%
+• Return Type: 15 days return
+• SKU: N/A
+_______________________
+Query6: 
+
+Product 1:
+• Name: FRAME Easy Iron
+• Type: Shirt
+• Color: Blue
+• Price: 4730 INR
+• Discount: 17%
+• Return Type: No return
+• SKU: N/A
+
+Product 2:
+• Name: Sam ls bd detailed
+• Type: Shirt
+• Color: Light Blue
+• Price: 4646 INR
+• Discount: 40%
+• Return Type: 7 days return
+• SKU: N/A
+
+Product 3:
+• Name: BORIS SS SHIRT
+• Type: Shirt
+• Color: White
+• Price: 2169 INR
+• Discount: 34%
+• Return Type: 7 days return
+• SKU: N/A
+_______________________
+Query7: 
+
+Product 1:
+• Name: Fav polo solid
+• Type: Polo shirt
+• Color: Dark Blue
+• Price: 4415 INR
+• Discount: 36%
+• Return Type: 15 days return
+• SKU: N/A
+
+Product 2:
+• Name: Rawley Chinos Slim
+• Type: Trousers
+• Color: Yellowish Brown
+• Price: 4843 INR
+• Discount: 14%
+• Return Type: No return
+• SKU: N/A
+
+Product 3:
+• Name: Reggie chino shorts
+• Type: Shorts
+• Color: Black
+• Price: 3165 INR
+• Discount: 7%
+• Return Type: 7 days return
+• SKU: N/A
+_______________________
+Query8: 
+
+Product 1:
+• Name: Harper Turtleneck
+• Type: Sweater
+• Color: Light Beige
+• Price: 2608 INR
+• Discount: 62%
+• Return Type: 15 days return
+• SKU: N/A
+
+Product 2:
+• Name: Elias long flannel shirt
+• Type: Shirt
+• Color: Dark Blue
+• Price: 1310 INR
+• Discount: 23%
+• Return Type: 7 days return
+• SKU: N/A
+
+Product 3:
+• Name: Bernie
+• Type: Top
+• Color: Light Blue
+• Price: 902 INR
+• Discount: 47%
+• Return Type: 15 days return
+• SKU: N/A
+_______________________
+Query9: 
+
+Product 1:
+• Name: Lemon Dress
+• Type: Dress
+• Color: Light Turquoise
+• Price: 2334 INR
+• Discount: 12%
+• Return Type: 7 days return
+• SKU: N/A
+
+Product 2:
+• Name: Oriane Dress
+• Type: Dress
+• Color: Blue
+• Price: 4056 INR
+• Discount: 39%
+• Return Type: 7 days return
+• SKU: N/A
+
+Product 3:
+• Name: Serrano
+• Type: Dress
+• Color: Light Grey
+• Price: 566 INR
+• Discount: 65%
+• Return Type: 7 days return
+• SKU: N/A
+_______________________
+Query10: 
+
+Product 1:
+• Name: CS Tiramisu
+• Type: Blouse
+• Color: Light Blue
+• Price: 1079 INR
+• Discount: 69%
+• Return Type: 7 days return
+• SKU: N/A
+
+Product 2:
+• Name: TINDRA N top
+• Type: Top
+• Color: Light Pink
+• Price: 4879 INR
+• Discount: 12%
+• Return Type: 15 days return
+• SKU: N/A
+
+Product 3:
+• Name: Hijack Top
+• Type: Top
+• Color: Off White
+• Price: 2352 INR
+• Discount: 33%
+• Return Type: 7 days return
+• SKU: N/A
+_______________________
+================================================================================================================================================

@@ -65,7 +65,10 @@ the user’s **current intent**, while lightly adapting to their profile.
 ### INPUTS
 
 Customer Context:
-{context}
+{customer_context}
+
+Chat History:
+{chat_history}
 
 User Query:
 {query}

@@ -130,10 +130,10 @@ query10 = "recommend me some trendy tops in pastel colors for weekend brunches"
 
 
 
-file_name = "results.txt"
+file_name = "test/results.txt"
 # Open a file and write text
 with open(file_name, "a") as file:
-    file.write("Temp: " + str(constants.temp) + "\n")
+    file.write("\nTemp: " + str(constants.temp) + "\n")
     file.write("Top-K: " + str(constants.top_k) + "\n")
     file.write("Refine Prompt: " + str(constants.refine_prompt_name) + "\n")
     file.write("Rerank Prompt: " + str(constants.reranker_prompt_name) + "\n")

@@ -11,12 +11,12 @@ product_embedding_dir = '/Users/manish-17509/PycharmProjects/data/cloth_products
 structured_response_prompt = otherPrompts.structured_response_prompt
 
 # Hyperparameters - Product RAG
-temp = 0.2
-top_k = 5
-refine_prompt = refinePrompts.refine_prompt_contextual
-reranker_prompt = rerankerPrompts.rerank_prompt_contextual
-refine_prompt_name = "refine_prompt_contextual"
-reranker_prompt_name = "rerank_prompt_contextual"
+temp = 0.8
+top_k = 20
+refine_prompt = refinePrompts.refine_prompt_creative
+reranker_prompt = rerankerPrompts.rerank_prompt_creative
+refine_prompt_name = "refine_prompt_creative"
+reranker_prompt_name = "rerank_prompt_creative"
 
 #os.environ["GOOGLE_API_KEY"] = "AIzaSyBfCV-TobP0xCdhrLvcZwbjSrIWjo03CX8"
 os.environ["GOOGLE_API_KEY"] = "AIzaSyDsqn5BtaPWEI4HE_4gAANWVSpMlxClE8Y"
