@@ -1,2 +1,4 @@
 code/chroma_db_storage
 code/api_key.txt
+data
+*.pyc
