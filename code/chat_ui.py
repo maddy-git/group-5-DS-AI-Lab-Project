@@ -12,5 +12,11 @@ if st.button("Ask"):
             answer = res.json().get("response", "")
             print(res.json())
             st.text(f"{answer}")
+
+            images = res.json().get("images", "")
+            if images:
+                for image in images:
+                    st.image(image)
+
         else:
             st.error("Something went wrong. Check backend logs.")

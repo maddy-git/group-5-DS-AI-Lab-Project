@@ -9,8 +9,8 @@ def handle_query():
     data = request.get_json()
     print(data)
     user_query = data.get('query')
-    llm_response = trigger_flow(user_query)
-    return jsonify({"response": llm_response}),200
+    llm_response, images = trigger_flow(user_query)
+    return jsonify({"response": llm_response, "images":images}),200
 
 if __name__ == '__main__':
     # This is for running locally during development

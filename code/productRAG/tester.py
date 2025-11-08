@@ -3,6 +3,7 @@ sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 
 from langchain_core.messages import HumanMessage, AIMessage
 from productRAG import findKBest, reranker, constants
+import time
 
 customer_context1 = '''
 --- CUSTOMER CONTEXT ---
@@ -116,87 +117,47 @@ history4 = [
 ]
 
 
-#Query 1
 query1 = "What about a red one?"
-query2 = "help me find a blue one"
+query2 = "could you help me find a shirt in grey color"
 query3 = "I need blue jean at low price around 2000 INR"
-query4 = "My age is 21 and my gender is Female. Help me with a red top"
+query4 = "My age is 25 and my gender is Female. Help me with a green top"
 query5 = "I need a shirt which goes well with cream pant, while creating refined query explicitly mention the short which will look good"
-query6 = "show me formal shirts that would go well for office meetings"
+query6 = "show me formal pants that would go well for office meetings"
 query7 = "suggest some casual wear options like polos or chinos for everyday use"
 query8 = "show me something stylish yet comfortable for casual outings"
 query9 = "I’m looking for a light summer dress suitable for both office and evening wear"
-query10 = "recommend me some trendy tops in pastel colors for weekend brunches"
+query10 = "recommend me some trendy tops in pastel colors for my friend's party"
+
+file_name = "test/test_product_logs.txt"
+
+def evaluateQuery(query, customer_context, history, query_number):
+    with open(file_name, "a") as file:
+        file.write("Query-" + str(query_number) + ": \n")
+        start = time.time()
+        top_products = findKBest.search_products(query, customer_context, history, constants.top_k)
+        file.write("\n ##########TIME TAKEN SEARCH: " + str(time.time() - start))
+        llm_response = reranker.recommend_top3_structured(query, customer_context, history, top_products)
+        file.write("\n ##########TIME TAKEN RERANK: " + str(time.time() - start))
+        file.write(llm_response)
+        file.write("\n_______________________\n")
 
 
-
-file_name = "test/results.txt"
-# Open a file and write text
 with open(file_name, "a") as file:
     file.write("\nTemp: " + str(constants.temp) + "\n")
     file.write("Top-K: " + str(constants.top_k) + "\n")
     file.write("Refine Prompt: " + str(constants.refine_prompt_name) + "\n")
     file.write("Rerank Prompt: " + str(constants.reranker_prompt_name) + "\n")
 
-    file.write("Query1: \n")
-    top_products = findKBest.search_products(query1, customer_context1, history1, constants.top_k)
-    llm_response = reranker.recommend_top3_structured(query1, customer_context1, history1, top_products)
-    file.write(llm_response)
-    file.write("\n_______________________\n")
-
-    file.write("Query2: \n")
-    top_products = findKBest.search_products(query2, customer_context2, history2, constants.top_k)
-    llm_response = reranker.recommend_top3_structured(query2, customer_context2, history2, top_products)
-    file.write(llm_response)
-    file.write("\n_______________________\n")
-
-    file.write("Query3: \n")
-    top_products = findKBest.search_products(query3, customer_context1, history1, constants.top_k)
-    llm_response = reranker.recommend_top3_structured(query3, customer_context1, history1, top_products)
-    file.write(llm_response)
-    file.write("\n_______________________\n")
-
-    file.write("Query4: \n")
-    top_products = findKBest.search_products(query4, customer_context3, history3, constants.top_k)
-    llm_response = reranker.recommend_top3_structured(query4, customer_context3, history3, top_products)
-    file.write(llm_response)
-    file.write("\n_______________________\n")
-
-    file.write("Query5: \n")
-    top_products = findKBest.search_products(query5, customer_context2, history2, constants.top_k)
-    llm_response = reranker.recommend_top3_structured(query5, customer_context2, history2, top_products)
-    file.write(llm_response)
-    file.write("\n_______________________\n")
-
-    file.write("Query6: \n")
-    top_products = findKBest.search_products(query6, customer_context2, history2, constants.top_k)
-    llm_response = reranker.recommend_top3_structured(query6, customer_context2, history2, top_products)
-    file.write(llm_response)
-    file.write("\n_______________________\n")
-
-    file.write("Query7: \n")
-    top_products = findKBest.search_products(query7, customer_context2, history1, constants.top_k)
-    llm_response = reranker.recommend_top3_structured(query7, customer_context2, history1, top_products)
-    file.write(llm_response)
-    file.write("\n_______________________\n")
-
-    file.write("Query8: \n")
-    top_products = findKBest.search_products(query8, customer_context5, history4, constants.top_k)
-    llm_response = reranker.recommend_top3_structured(query8, customer_context5, history4, top_products)
-    file.write(llm_response)
-    file.write("\n_______________________\n")
-
-    file.write("Query9: \n")
-    top_products = findKBest.search_products(query9, customer_context3, history4, constants.top_k)
-    llm_response = reranker.recommend_top3_structured(query9, customer_context3, history4, top_products)
-    file.write(llm_response)
-    file.write("\n_______________________\n")
-
-    file.write("Query10: \n")
-    top_products = findKBest.search_products(query10, customer_context3, history4, constants.top_k)
-    llm_response = reranker.recommend_top3_structured(query10, customer_context3, history4, top_products)
-    file.write(llm_response)
-    file.write("\n_______________________\n")
+    evaluateQuery(query1, customer_context1, history1, 1)
+    evaluateQuery(query2, customer_context2, history2, 2)
+    evaluateQuery(query3, customer_context1, history1, 3)
+    evaluateQuery(query4, customer_context3, history3, 4)
+    evaluateQuery(query5, customer_context2, history2, 5)
+    evaluateQuery(query6, customer_context2, history2, 6)
+    evaluateQuery(query7, customer_context2, history1, 7)
+    evaluateQuery(query8, customer_context5, history4, 8)
+    evaluateQuery(query9, customer_context3, history4, 9)
+    evaluateQuery(query10, customer_context3, history4, 10)
 
     file.write("========================================================================")
     file.write("========================================================================")
