@@ -18,12 +18,12 @@ product_faiss_dir = '/Users/manish-17509/PycharmProjects/data/products_with_meta
 structured_response_prompt = otherPrompts.structured_response_prompt
 
 # Hyperparameters - Product RAG
-temp = 0
-top_k = 10
-refine_prompt = refinePrompts.refine_prompt_precise
-reranker_prompt = rerankerPrompts.rerank_prompt_precise
-refine_prompt_name = "refine_prompt_precise"
-reranker_prompt_name = "rerank_prompt_precise"
+temp = 0.5
+top_k = 12
+refine_prompt = refinePrompts.refine_prompt_balanced
+reranker_prompt = rerankerPrompts.rerank_prompt_balanced
+refine_prompt_name = "refine_prompt_balanced"
+reranker_prompt_name = "rerank_prompt_balanced"
 
 os.environ["GOOGLE_API_KEY"] = "AIzaSyBfCV-TobP0xCdhrLvcZwbjSrIWjo03CX8"
 #os.environ["GOOGLE_API_KEY"] = "AIzaSyDsqn5BtaPWEI4HE_4gAANWVSpMlxClE8Y"

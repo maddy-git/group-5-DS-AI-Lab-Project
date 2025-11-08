@@ -1,0 +1,1260 @@
+Temp: 0.2
+Top-K: 5
+Refine Prompt: refine_prompt_contextual
+Rerank Prompt: rerank_prompt_contextual
+
+Query-1:
+
+ ##########TIME TAKEN SEARCH: 10.882697105407715
+ ##########TIME TAKEN RERANK: 31.56193995475769
+Product 1:
+• Name: Wingman
+• Type: Vest top
+• Color: Dark Blue
+• Price: 2673 INR
+• Discount: 33%
+• Return Type: 7 days return
+• SKU: 562480004
+
+Product 2:
+• Name: McClaren Body
+• Type: Sweater
+• Color: Black
+• Price: 3215 INR
+• Discount: 19%
+• Return Type: 15 days return
+• SKU: 527657001
+
+Product 3:
+• Name: Marshall Lace up Top
+• Type: Sweater
+• Color: Grey
+• Price: 747 INR
+• Discount: 50%
+• Return Type: 15 days return
+• SKU: 351332007
+_______________________
+Query-2: 
+
+ ##########TIME TAKEN SEARCH: 2.8664157390594482
+ ##########TIME TAKEN RERANK: 20.909979820251465
+Product 1:
+• Name: RC WILLOW BOXY TEE
+• Type: T-shirt
+• Color: Dark Blue
+• Price: 695 INR
+• Discount: 53%
+• Return Type: No return
+• SKU: 558183001
+
+Product 2:
+• Name: TW Dixie Windbreaker
+• Type: Hoodie
+• Color: Black
+• Price: 2138 INR
+• Discount: 9%
+• Return Type: 7 days return
+• SKU: 555990001
+
+Product 3:
+• Name: Dixie Windbreaker
+• Type: Hoodie
+• Color: White
+• Price: 3630 INR
+• Discount: 55%
+• Return Type: 15 days return
+• SKU: 555990005
+_______________________
+Query-3: 
+
+ ##########TIME TAKEN SEARCH: 8.768505096435547
+ ##########TIME TAKEN RERANK: 22.437486171722412
+Product 1:
+• Name: Slim 5pkt
+• Type: Trousers
+• Color: Blue
+• Price: 2407 INR
+• Discount: 17%
+• Return Type: No return
+• SKU: 449897001
+
+Product 2:
+• Name: Slim 5pkt
+• Type: Trousers
+• Color: Blue
+• Price: 3537 INR
+• Discount: 55%
+• Return Type: 15 days return
+• SKU: 449897050
+
+Product 3:
+• Name: Slim 5pkt
+• Type: Trousers
+• Color: Blue
+• Price: 3563 INR
+• Discount: 33%
+• Return Type: 7 days return
+• SKU: 449897049
+_______________________
+Query-4: 
+
+ ##########TIME TAKEN SEARCH: 7.2740631103515625
+ ##########TIME TAKEN RERANK: 37.92368507385254
+Product 1:
+• Name: Dixie Windbreaker
+• Type: Hoodie
+• Color: Greenish Khaki
+• Price: 687 INR
+• Discount: 13%
+• Return Type: 7 days return
+• SKU: 555990003
+
+Product 2:
+• Name: Dixie Windbreaker
+• Type: Hoodie
+• Color: Red
+• Price: 1067 INR
+• Discount: 54%
+• Return Type: 15 days return
+• SKU: 555990002
+
+Product 3:
+• Name: Dixie Windbreaker
+• Type: Hoodie
+• Color: White
+• Price: 3630 INR
+• Discount: 55%
+• Return Type: 15 days return
+• SKU: 555990005
+_______________________
+Query-5: 
+
+ ##########TIME TAKEN SEARCH: 3.2255630493164062
+ ##########TIME TAKEN RERANK: 24.457024812698364
+Product 1:
+• Name: Jagger pant
+• Type: Trousers
+• Color: Dark Blue
+• Price: 2102 INR
+• Discount: 25%
+• Return Type: No return
+• SKU: 553271004
+
+Product 2:
+• Name: CARBON Cropped slacks
+• Type: Trousers
+• Color: Dark Blue
+• Price: 1211 INR
+• Discount: 69%
+• Return Type: No return
+• SKU: 544318002
+
+Product 3:
+• Name: Jagger pant
+• Type: Trousers
+• Color: Dark Grey
+• Price: 3879 INR
+• Discount: 21%
+• Return Type: No return
+• SKU: 553271002
+_______________________
+Query-6: 
+
+ ##########TIME TAKEN SEARCH: 5.826908349990845
+ ##########TIME TAKEN RERANK: 31.260419130325317
+Product 1:
+• Name: CARBON Regular slacks - cotton
+• Type: Trousers
+• Color: Dark Blue
+• Price: 1370 INR
+• Discount: 31%
+• Return Type: 7 days return
+• SKU: 557570003
+
+Product 2:
+• Name: Kanta slacks Mama
+• Type: Trousers
+• Color: Dark Pink
+• Price: 4981 INR
+• Discount: 43%
+• Return Type: 15 days return
+• SKU: 545699002
+
+Product 3:
+• Name: Marshall Lace up Top
+• Type: Sweater
+• Color: Grey
+• Price: 747 INR
+• Discount: 50%
+• Return Type: 15 days return
+• SKU: 351332007
+_______________________
+Query-7: 
+
+ ##########TIME TAKEN SEARCH: 4.327684164047241
+ ##########TIME TAKEN RERANK: 14.001060724258423
+Product 1:
+• Name: Rawley Chinos Slim
+• Type: Trousers
+• Color: Dark Blue
+• Price: 2320 INR
+• Discount: 5%
+• Return Type: 15 days return
+• SKU: 466595002
+
+Product 2:
+• Name: Rawley Chinos Slim
+• Type: Trousers
+• Color: Yellowish Brown
+• Price: 796 INR
+• Discount: 58%
+• Return Type: 15 days return
+• SKU: 466595024
+
+Product 3:
+• Name: CARBON Cropped slacks
+• Type: Trousers
+• Color: Dark Blue
+• Price: 1211 INR
+• Discount: 69%
+• Return Type: No return
+• SKU: 544318002
+_______________________
+Query-8: 
+
+ ##########TIME TAKEN SEARCH: 7.726776838302612
+ ##########TIME TAKEN RERANK: 30.82962203025818
+Product 1:
+• Name: COZY WAGRAM TEE
+• Type: Sweater
+• Color: Black
+• Price: 1030 INR
+• Discount: 12%
+• Return Type: No return
+• SKU: 551647001
+
+Product 2:
+• Name: COZY WAGRAM TEE
+• Type: Sweater
+• Color: Pink
+• Price: 2805 INR
+• Discount: 6%
+• Return Type: 15 days return
+• SKU: 551647002
+
+Product 3:
+• Name: COZY WAGRAM TEE
+• Type: Sweater
+• Color: Light Beige
+• Price: 1030 INR
+• Discount: 12%
+• Return Type: No return
+• SKU: 551647003
+_______________________
+Query-9: 
+
+ ##########TIME TAKEN SEARCH: 5.646626234054565
+ ##########TIME TAKEN RERANK: 18.355542182922363
+Product 1:
+• Name: Topi dress J
+• Type: Dress
+• Color: Grey
+• Price: 1361 INR
+• Discount: 61%
+• Return Type: No return
+• SKU: 519929007
+
+Product 2:
+• Name: Topi dress J
+• Type: Dress
+• Color: White
+• Price: 3502 INR
+• Discount: 56%
+• Return Type: 7 days return
+• SKU: 519929010
+
+Product 3:
+• Name: Topi dress J
+• Type: Dress
+• Color: Dark Blue
+• Price: 2225 INR
+• Discount: 65%
+• Return Type: No return
+• SKU: 519929009
+_______________________
+Query-10: 
+
+ ##########TIME TAKEN SEARCH: 8.201802968978882
+ ##########TIME TAKEN RERANK: 24.67135500907898
+Product 1:
+• Name: Palma plizze
+• Type: Vest top
+• Color: Light Beige
+• Price: 1859 INR
+• Discount: 3%
+• Return Type: 7 days return
+• SKU: 523150002
+
+Product 2:
+• Name: Palma plizze
+• Type: Vest top
+• Color: Dark Blue
+• Price: 4384 INR
+• Discount: 66%
+• Return Type: No return
+• SKU: 523150005
+
+Product 3:
+• Name: Palma plizze
+• Type: Vest top
+• Color: Black
+• Price: 3915 INR
+• Discount: 24%
+• Return Type: No return
+• SKU: 523150001
+
+================================================================================================================================================Query-1: 
+Temp: 0
+Top-K: 10
+Refine Prompt: refine_prompt_precise
+Rerank Prompt: rerank_prompt_precise
+
+Query-1:
+
+ ##########TIME TAKEN SEARCH: 19.172171115875244
+ ##########TIME TAKEN RERANK: 41.21399927139282
+Product 1:
+• Name: R-NECK SS BASIC 3 PK
+• Type: T-shirt
+• Color: Dark Red
+• Price: 3068 INR
+• Discount: 3%
+• Return Type: 7 days return
+• SKU: 513699018
+
+Product 2:
+• Name: 3 PK R-NECK SS BASIC
+• Type: T-shirt
+• Color: Dark Turquoise
+• Price: 1040 INR
+• Discount: 51%
+• Return Type: No return
+• SKU: 513699012
+
+Product 3:
+• Name: Dark tee fancy
+• Type: T-shirt
+• Color: Dark Grey
+• Price: 2899 INR
+• Discount: 49%
+• Return Type: 7 days return
+• SKU: 512297001
+_______________________
+Query-2: 
+
+ ##########TIME TAKEN SEARCH: 5.532428741455078
+ ##########TIME TAKEN RERANK: 46.894980907440186
+Product 1:
+• Name: TD check big Gingham/OPEN
+• Type: Shirt
+• Color: Dark Blue
+• Price: 580
+• Discount: 5%
+• Return Type: 15 days return
+• SKU: 551910005
+
+Product 2:
+• Name: TD check big Gingham/OPEN
+• Type: Shirt
+• Color: Black
+• Price: 3562
+• Discount: 69%
+• Return Type: 15 days return
+• SKU: 551910004
+
+Product 3:
+• Name: BORIS
+• Type: Shirt
+• Color: Dark Blue
+• Price: 2520
+• Discount: 20%
+• Return Type: 7 days return
+• SKU: 501620004
+_______________________
+Query-3: 
+
+ ##########TIME TAKEN SEARCH: 11.004729986190796
+ ##########TIME TAKEN RERANK: 60.25013303756714
+Product 1:
+• Name: Slim 5pkt
+• Type: Trousers
+• Color: Blue
+• Price: 2407
+• Discount: 17
+• Return Type: No return
+• SKU: 449897001
+
+Product 2:
+• Name: RELAXED BLUEBLK 89
+• Type: Trousers
+• Color: Dark Blue
+• Price: 726
+• Discount: 3
+• Return Type: No return
+• SKU: 532111001
+
+Product 3:
+• Name: SKINNY SS 89
+• Type: Trousers
+• Color: Blue
+• Price: 2657
+• Discount: 39
+• Return Type: No return
+• SKU: 554541045
+_______________________
+Query-4: 
+
+ ##########TIME TAKEN SEARCH: 5.522168874740601
+ ##########TIME TAKEN RERANK: 26.20479702949524
+Product 1:
+• Name: JOANNA Tanktop
+• Type: Vest top
+• Color: Light Green
+• Price: 2032 INR
+• Discount: 59%
+• Return Type: 7 days return
+• SKU: 500133020
+
+Product 2:
+• Name: Britta cropped
+• Type: Sweater
+• Color: Dark Green
+• Price: 2003 INR
+• Discount: 62%
+• Return Type: 7 days return
+• SKU: 554227002
+
+Product 3:
+• Name: Julep hood
+• Type: Hoodie
+• Color: Greenish Khaki
+• Price: 3474 INR
+• Discount: 21%
+• Return Type: 7 days return
+• SKU: 542695001
+_______________________
+Query-5: 
+
+ ##########TIME TAKEN SEARCH: 5.178991079330444
+ ##########TIME TAKEN RERANK: 23.145216941833496
+Product 1:
+• Name: BIRCH Relaxed shirt - check
+• Type: Shirt
+• Color: Light Blue
+• Price: 4394 INR
+• Discount: 4%
+• Return Type: 15 days return
+• SKU: 550818001
+
+Product 2:
+• Name: TD check big Gingham/OPEN
+• Type: Shirt
+• Color: Dark Blue
+• Price: 580 INR
+• Discount: 5%
+• Return Type: 15 days return
+• SKU: 551910005
+
+Product 3:
+• Name: BD check Gerald TVP
+• Type: Shirt
+• Color: Yellowish Brown
+• Price: 959 INR
+• Discount: 33%
+• Return Type: 15 days return
+• SKU: 495725008
+_______________________
+Query-6: 
+
+ ##########TIME TAKEN SEARCH: 5.937260150909424
+ ##########TIME TAKEN RERANK: 28.05055522918701
+Product 1:
+• Name: CARBON Regular slacks - cotton
+• Type: Trousers
+• Color: Dark Blue
+• Price: 1370 INR
+• Discount: 31%
+• Return Type: 7 days return
+• SKU: 557570003
+
+Product 2:
+• Name: CARBON Cropped slacks
+• Type: Trousers
+• Color: Dark Blue
+• Price: 1211 INR
+• Discount: 69%
+• Return Type: No return
+• SKU: 544318002
+
+Product 3:
+• Name: W ED Bali trusers EQ
+• Type: Trousers
+• Color: Black
+• Price: 938 INR
+• Discount: 12%
+• Return Type: 15 days return
+• SKU: 540536002
+_______________________
+Query-7: 
+
+ ##########TIME TAKEN SEARCH: 5.763363838195801
+ ##########TIME TAKEN RERANK: 24.26614284515381
+Product 1:
+• Name: Chino Leeds
+• Type: Trousers
+• Color: Dark Blue
+• Price: 2378 INR
+• Discount: 4%
+• Return Type: No return
+• SKU: 541197002
+
+Product 2:
+• Name: Rawley Chinos Slim
+• Type: Trousers
+• Color: Dark Blue
+• Price: 2320 INR
+• Discount: 5%
+• Return Type: 15 days return
+• SKU: 466595002
+
+Product 3:
+• Name: Rawley chinos
+• Type: Trousers
+• Color: Yellowish Brown
+• Price: 2259 INR
+• Discount: 36%
+• Return Type: No return
+• SKU: 466595019
+_______________________
+Query-8: 
+
+ ##########TIME TAKEN SEARCH: 9.955961227416992
+ ##########TIME TAKEN RERANK: 36.662919998168945
+Product 1:
+• Name: Culotte
+• Type: Trousers
+• Color: Light Blue
+• Price: 3159 INR
+• Discount: 39%
+• Return Type: No return
+• SKU: 400296010
+
+Product 2:
+• Name: Jacket Slim
+• Type: Jacket
+• Color: Light Blue
+• Price: 3217 INR
+• Discount: 65%
+• Return Type: 15 days return
+• SKU: 399061017
+
+Product 3:
+• Name: Kanta slacks Mama
+• Type: Trousers
+• Color: Dark Pink
+• Price: 4981 INR
+• Discount: 43%
+• Return Type: 15 days return
+• SKU: 545699002
+_______________________
+Query-9: 
+
+ ##########TIME TAKEN SEARCH: 16.576340913772583
+ ##########TIME TAKEN RERANK: 35.446308851242065
+Product 1:
+• Name: Heatwave Dress_
+• Type: Dress
+• Color: Light Blue
+• Price: 2931 INR
+• Discount: 25%
+• Return Type: 7 days return
+• SKU: 548879001
+
+Product 2:
+• Name: Summer strap dress
+• Type: Dress
+• Color: Dark Blue
+• Price: 3295 INR
+• Discount: 64%
+• Return Type: No return
+• SKU: 496762020
+
+Product 3:
+• Name: SUMMER STRAP DRESS_09-090
+• Type: Dress
+• Color: Light Yellow
+• Price: 2905 INR
+• Discount: 27%
+• Return Type: No return
+• SKU: 496762008
+_______________________
+Query-10: 
+
+ ##########TIME TAKEN SEARCH: 15.227749109268188
+ ##########TIME TAKEN RERANK: 35.770159006118774
+Product 1:
+• Name: Hepburn top
+• Type: Vest top
+• Color: Light Blue
+• Price: 4209 INR
+• Discount: 7%
+• Return Type: 15 days return
+• SKU: 513373001
+
+Product 2:
+• Name: Hepburn top
+• Type: Vest top
+• Color: Yellowish Brown
+• Price: 2305 INR
+• Discount: 60%
+• Return Type: 7 days return
+• SKU: 513373020
+
+Product 3:
+• Name: Silver Fix top
+• Type: Vest top
+• Color: Silver
+• Price: 2383 INR
+• Discount: 8%
+• Return Type: 7 days return
+• SKU: 558362001
+
+================================================================================================================================================
+Temp: 0.5
+Top-K: 12
+Refine Prompt: refine_prompt_balanced
+Rerank Prompt: rerank_prompt_balanced
+Query-1: 
+
+ ##########TIME TAKEN SEARCH: 8.488430976867676
+ ##########TIME TAKEN RERANK: 47.83304190635681
+Product 1:
+• Name: Roll Up Tee
+• Type: T-shirt
+• Color: Light Red
+• Price: 664
+• Discount: 24
+• Return Type: No return
+• SKU: 541706015
+
+Product 2:
+• Name: BD check Gerald
+• Type: Shirt
+• Color: Dark Red
+• Price: 2362
+• Discount: 10
+• Return Type: No return
+• SKU: 495725005
+
+Product 3:
+• Name: 3 PK R-NECK SS BASIC
+• Type: T-shirt
+• Color: Black
+• Price: 1007
+• Discount: 42
+• Return Type: 7 days return
+• SKU: 513699006
+_______________________
+Query-2: 
+
+ ##########TIME TAKEN SEARCH: 4.841120004653931
+ ##########TIME TAKEN RERANK: 18.54040503501892
+Product 1:
+• Name: 3 PK V-NECK SS SLIM
+• Type: T-shirt
+• Color: Grey
+• Price: 4993 INR
+• Discount: 35%
+• Return Type: 7 days return
+• SKU: 542533005
+
+Product 2:
+• Name: AUSTIN LS HENLEY
+• Type: Top
+• Color: Dark Grey
+• Price: 1909 INR
+• Discount: 25%
+• Return Type: 15 days return
+• SKU: 543062001
+
+Product 3:
+• Name: AUSTIN LS HENLEY
+• Type: Top
+• Color: Light Grey
+• Price: 2985 INR
+• Discount: 48%
+• Return Type: No return
+• SKU: 543062008
+_______________________
+Query-3: 
+
+ ##########TIME TAKEN SEARCH: 8.695106983184814
+ ##########TIME TAKEN RERANK: 31.13481092453003
+Product 1:
+• Name: Slim 5pkt Midprice
+• Type: Trousers
+• Color: Light Blue
+• Price: 2267 INR
+• Discount: 30%
+• Return Type: No return
+• SKU: 400342033
+
+Product 2:
+• Name: Slim 5pkt
+• Type: Trousers
+• Color: Blue
+• Price: 2407 INR
+• Discount: 17%
+• Return Type: No return
+• SKU: 449897001
+
+Product 3:
+• Name: Slim 5pkt Midprice
+• Type: Trousers
+• Color: Light Blue
+• Price: 3346 INR
+• Discount: 47%
+• Return Type: No return
+• SKU: 400342015
+_______________________
+Query-4: 
+
+ ##########TIME TAKEN SEARCH: 10.838871717453003
+ ##########TIME TAKEN RERANK: 23.19628596305847
+Product 1:
+• Name: Pamela tee
+• Type: T-shirt
+• Color: Greenish Khaki
+• Price: 3536 INR
+• Discount: 67%
+• Return Type: 15 days return
+• SKU: 215337039
+
+Product 2:
+• Name: Dixie Windbreaker
+• Type: Hoodie
+• Color: Greenish Khaki
+• Price: 687 INR
+• Discount: 13%
+• Return Type: 7 days return
+• SKU: 555990003
+
+Product 3:
+• Name: Rita Ringer Tee
+• Type: T-shirt
+• Color: Light Green
+• Price: 3226 INR
+• Discount: 1%
+• Return Type: 7 days return
+• SKU: 379780042
+_______________________
+Query-5: 
+
+ ##########TIME TAKEN SEARCH: 9.74018907546997
+ ##########TIME TAKEN RERANK: 29.534839153289795
+Product 1:
+• Name: Mandarine Raf
+• Type: Shirt
+• Color: Light Blue
+• Price: 4303 INR
+• Discount: 1%
+• Return Type: 15 days return
+• SKU: 551906003
+
+Product 2:
+• Name: BD check Gerald TVP
+• Type: Shirt
+• Color: Dark Blue
+• Price: 1991 INR
+• Discount: 2%
+• Return Type: 7 days return
+• SKU: 495725007
+
+Product 3:
+• Name: TD check big Gingham/OPEN
+• Type: Shirt
+• Color: Dark Blue
+• Price: 580 INR
+• Discount: 5%
+• Return Type: 15 days return
+• SKU: 551910005
+_______________________
+Query-6: 
+
+ ##########TIME TAKEN SEARCH: 3.6060850620269775
+ ##########TIME TAKEN RERANK: 16.905184030532837
+Product 1:
+• Name: CARBON Regular slacks - cotton
+• Type: Trousers
+• Color: Dark Blue
+• Price: 1370 INR
+• Discount: 31%
+• Return Type: 7 days return
+• SKU: 557570003
+
+Product 2:
+• Name: CARBON Cropped slacks
+• Type: Trousers
+• Color: Dark Blue
+• Price: 1211 INR
+• Discount: 69%
+• Return Type: No return
+• SKU: 544318002
+
+Product 3:
+• Name: Bruce skinny 5-pkt
+• Type: Trousers
+• Color: Dark Blue
+• Price: 3540 INR
+• Discount: 66%
+• Return Type: 15 days return
+• SKU: 416157036
+_______________________
+Query-7: 
+
+ ##########TIME TAKEN SEARCH: 5.3309760093688965
+ ##########TIME TAKEN RERANK: 37.76835513114929
+Product 1:
+• Name: Rawley Chinos Slim
+• Type: Trousers
+• Color: Dark Blue
+• Price: 2320 INR
+• Discount: 5%
+• Return Type: 15 days return
+• SKU: 466595002
+Product 2:
+• Name: Rawley Chinos Slim
+• Type: Trousers
+• Color: Beige
+• Price: 549 INR
+• Discount: 38%
+• Return Type: No return
+• SKU: 466595003
+Product 3:
+• Name: Rawley Chinos Slim
+• Type: Trousers
+• Color: Black
+• Price: 3802 INR
+• Discount: 6%
+• Return Type: No return
+• SKU: 466595001
+_______________________
+Query-8: 
+
+ ##########TIME TAKEN SEARCH: 8.420635223388672
+ ##########TIME TAKEN RERANK: 25.496259212493896
+Product 1:
+• Name: COZY WAGRAM TEE
+• Type: Sweater
+• Color: Black
+• Price: 1030 INR
+• Discount: 12%
+• Return Type: No return
+• SKU: 551647001
+
+Product 2:
+• Name: Sigita
+• Type: Top
+• Color: Black
+• Price: 963 INR
+• Discount: 18%
+• Return Type: 15 days return
+• SKU: 561343001
+
+Product 3:
+• Name: Baloo Throw-on
+• Type: Cardigan
+• Color: Light Beige
+• Price: 1614 INR
+• Discount: 29%
+• Return Type: 15 days return
+• SKU: 488068001
+_______________________
+Query-9: 
+
+ ##########TIME TAKEN SEARCH: 6.9034998416900635
+ ##########TIME TAKEN RERANK: 19.039235830307007
+Product 1:
+• Name: Topi dress J
+• Type: Dress
+• Color: White
+• Price: 3502 INR
+• Discount: 56%
+• Return Type: 7 days return
+• SKU: 519929010
+
+Product 2:
+• Name: Rose
+• Type: Dress
+• Color: Light Blue
+• Price: 4184 INR
+• Discount: 31%
+• Return Type: No return
+• SKU: 523950004
+
+Product 3:
+• Name: Lush dress
+• Type: Dress
+• Color: Light Pink
+• Price: 3067 INR
+• Discount: 10%
+• Return Type: No return
+• SKU: 560558002
+_______________________
+Query-10: 
+
+ ##########TIME TAKEN SEARCH: 8.128314018249512
+ ##########TIME TAKEN RERANK: 24.467883825302124
+Product 1:
+• Name: Pia Party
+• Type: Sweater
+• Color: Light Grey
+• Price: 4032 INR
+• Discount: 9%
+• Return Type: No return
+• SKU: 549914007
+
+Product 2:
+• Name: Sparkling Tank
+• Type: Vest top
+• Color: Black
+• Price: 2410 INR
+• Discount: 35%
+• Return Type: 7 days return
+• SKU: 556673001
+
+Product 3:
+• Name: Pia Party
+• Type: Sweater
+• Color: Black
+• Price: 4834 INR
+• Discount: 28%
+• Return Type: No return
+• SKU: 549914003
+_______________________
+================================================================================================================================================
+Temp: 0.8
+Top-K: 20
+Refine Prompt: refine_prompt_creative
+Rerank Prompt: rerank_prompt_creative
+Query-1: 
+
+ ##########TIME TAKEN SEARCH: 11.298354864120483
+ ##########TIME TAKEN RERANK: 23.379356145858765
+Product 1:
+• Name: Curt Graphic
+• Type: Shirt
+• Color: Dark Red
+• Price: 4681 INR
+• Discount: 0%
+• Return Type: 7 days return
+• SKU: 558961001
+
+Product 2:
+• Name: BD check Gerald
+• Type: Shirt
+• Color: Dark Red
+• Price: 2362 INR
+• Discount: 10%
+• Return Type: No return
+• SKU: 495725005
+
+Product 3:
+• Name: BD check Gerald TVP
+• Type: Shirt
+• Color: Dark Red
+• Price: 2753 INR
+• Discount: 41%
+• Return Type: No return
+• SKU: 495725011
+_______________________
+Query-2: 
+
+ ##########TIME TAKEN SEARCH: 5.586374998092651
+ ##########TIME TAKEN RERANK: 22.41888999938965
+Product 1:
+• Name: Almodovar
+• Type: Shirt
+• Color: Light Grey
+• Price: 1413 INR
+• Discount: 39%
+• Return Type: 7 days return
+• SKU: 501619001
+
+Product 2:
+• Name: Almodovar
+• Type: Shirt
+• Color: Dark Grey
+• Price: 3372 INR
+• Discount: 33%
+• Return Type: 15 days return
+• SKU: 501619015
+
+Product 3:
+• Name: Stylo smart shirt
+• Type: Shirt
+• Color: Black
+• Price: 4022 INR
+• Discount: 30%
+• Return Type: No return
+• SKU: 519516007
+_______________________
+Query-3: 
+
+ ##########TIME TAKEN SEARCH: 6.587141036987305
+ ##########TIME TAKEN RERANK: 50.42339587211609
+Product 1:
+• Name: Slim 5pkt Midprice
+• Type: Trousers
+• Color: Blue
+• Price: 833 INR
+• Discount: 55%
+• Return Type: 7 days return
+• SKU: 400342037
+
+Product 2:
+• Name: ED Benjy
+• Type: Trousers
+• Color: Blue
+• Price: 887 INR
+• Discount: 11%
+• Return Type: 15 days return
+• SKU: 545612001
+
+Product 3:
+• Name: Vintage HW
+• Type: Trousers
+• Color: Blue
+• Price: 906 INR
+• Discount: 5%
+• Return Type: 15 days return
+• SKU: 557938003
+_______________________
+Query-4: 
+
+ ##########TIME TAKEN SEARCH: 9.84664511680603
+ ##########TIME TAKEN RERANK: 26.6824152469635
+Product 1:
+• Name: JOANNA Tanktop
+• Type: Vest top
+• Color: Light Green
+• Price: 2032 INR
+• Discount: 59%
+• Return Type: 7 days return
+• SKU: 500133020
+
+Product 2:
+• Name: SPEED Salt
+• Type: Vest top
+• Color: Greenish Khaki
+• Price: 4449 INR
+• Discount: 1%
+• Return Type: 7 days return
+• SKU: 523160001
+
+Product 3:
+• Name: Cannon top
+• Type: Blouse
+• Color: Greenish Khaki
+• Price: 531 INR
+• Discount: 24%
+• Return Type: 7 days return
+• SKU: 505091001
+_______________________
+Query-5: 
+
+ ##########TIME TAKEN SEARCH: 7.186906814575195
+ ##########TIME TAKEN RERANK: 26.518519163131714
+Product 1:
+• Name: Mandarine Raf
+• Type: Shirt
+• Color: White
+• Price: 3820 INR
+• Discount: 54%
+• Return Type: 15 days return
+• SKU: 551906002
+
+Product 2:
+• Name: CA Berlin
+• Type: Shirt
+• Color: Light Blue
+• Price: 4508 INR
+• Discount: 35%
+• Return Type: 15 days return
+• SKU: 443078004
+
+Product 3:
+• Name: TD check big Gingham/OPEN
+• Type: Shirt
+• Color: Black
+• Price: 3562 INR
+• Discount: 69%
+• Return Type: 15 days return
+• SKU: 551910004
+_______________________
+Query-6: 
+
+ ##########TIME TAKEN SEARCH: 8.27617883682251
+ ##########TIME TAKEN RERANK: 24.162015676498413
+Product 1:
+• Name: CARBON Regular slacks - cotton
+• Type: Trousers
+• Color: Dark Blue
+• Price: 1370 INR
+• Discount: 31%
+• Return Type: 7 days return
+• SKU: 557570003
+
+Product 2:
+• Name: Lagos
+• Type: Trousers
+• Color: Black
+• Price: 1349 INR
+• Discount: 0%
+• Return Type: No return
+• SKU: 543729003
+
+Product 3:
+• Name: Norman slacks
+• Type: Trousers
+• Color: Dark Blue
+• Price: 924 INR
+• Discount: 14%
+• Return Type: 15 days return
+• SKU: 481420010
+_______________________
+Query-7: 
+
+ ##########TIME TAKEN SEARCH: 4.113724946975708
+ ##########TIME TAKEN RERANK: 18.72801184654236
+Product 1:
+• Name: Rawley Chinos Slim
+• Type: Trousers
+• Color: Dark Blue
+• Price: 2320 INR
+• Discount: 5%
+• Return Type: 15 days return
+• SKU: 466595002
+
+Product 2:
+• Name: Rawley Chinos Slim
+• Type: Trousers
+• Color: Black
+• Price: 3802 INR
+• Discount: 6%
+• Return Type: No return
+• SKU: 466595001
+
+Product 3:
+• Name: Rawley Chinos Slim
+• Type: Trousers
+• Color: Beige
+• Price: 549 INR
+• Discount: 38%
+• Return Type: No return
+• SKU: 466595003
+_______________________
+Query-8: 
+
+ ##########TIME TAKEN SEARCH: 10.006837129592896
+ ##########TIME TAKEN RERANK: 28.884493827819824
+Product 1:
+• Name: COZY WAGRAM TEE
+• Type: Sweater
+• Color: Black
+• Price: 1030 INR
+• Discount: 12%
+• Return Type: No return
+• SKU: 551647001
+
+Product 2:
+• Name: Cosy
+• Type: Cardigan
+• Color: Beige
+• Price: 3243 INR
+• Discount: 10%
+• Return Type: No return
+• SKU: 519773002
+
+Product 3:
+• Name: W Lotus blouse EQ
+• Type: Blouse
+• Color: Light Blue
+• Price: 2107 INR
+• Discount: 62%
+• Return Type: 15 days return
+• SKU: 523533003
+_______________________
+Query-9: 
+
+ ##########TIME TAKEN SEARCH: 7.794384956359863
+ ##########TIME TAKEN RERANK: 30.59338116645813
+Product 1:
+• Name: Heatwave Dress_
+• Type: Dress
+• Color: Light Blue
+• Price: 2931 INR
+• Discount: 25%
+• Return Type: 7 days return
+• SKU: 548879001
+
+Product 2:
+• Name: Sri Lanka dress
+• Type: Dress
+• Color: Light Yellow
+• Price: 2844 INR
+• Discount: 23%
+• Return Type: 15 days return
+• SKU: 545908004
+
+Product 3:
+• Name: Gemini Dress
+• Type: Dress
+• Color: Blue
+• Price: 2242 INR
+• Discount: 48%
+• Return Type: 15 days return
+• SKU: 547636001
+_______________________
+Query-10: 
+
+ ##########TIME TAKEN SEARCH: 7.246601819992065
+ ##########TIME TAKEN RERANK: 26.854670763015747
+Product 1:
+• Name: CS Disco Top
+• Type: Top
+• Color: Light Orange
+• Price: 753 INR
+• Discount: 52%
+• Return Type: 15 days return
+• SKU: 514232001
+
+Product 2:
+• Name: Hepburn top
+• Type: Vest top
+• Color: Light Blue
+• Price: 4209 INR
+• Discount: 7%
+• Return Type: 15 days return
+• SKU: 513373001
+
+Product 3:
+• Name: Girly Tank
+• Type: Vest top
+• Color: Light Turquoise
+• Price: 2951 INR
+• Discount: 66%
+• Return Type: 7 days return
+• SKU: 511961001
+_______________________
+================================================================================================================================================
