@@ -1,6 +1,7 @@
 import chromadb
 from sentence_transformers import SentenceTransformer
-
+import os
+import fitz
 
 def extract_text_from_pdf(pdf_path):
     """Extracts text from a PDF file."""
