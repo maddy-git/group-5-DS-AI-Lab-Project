@@ -25,6 +25,6 @@ reranker_prompt = rerankerPrompts.rerank_prompt_balanced
 refine_prompt_name = "refine_prompt_balanced"
 reranker_prompt_name = "rerank_prompt_balanced"
 
-os.environ["GOOGLE_API_KEY"] = "AIzaSyBfCV-TobP0xCdhrLvcZwbjSrIWjo03CX8"
-#os.environ["GOOGLE_API_KEY"] = "AIzaSyDsqn5BtaPWEI4HE_4gAANWVSpMlxClE8Y"
+os.environ["GOOGLE_API_KEY"] = ""
+#os.environ["GOOGLE_API_KEY"] = ""
 llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=temp)
