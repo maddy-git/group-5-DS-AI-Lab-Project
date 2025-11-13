@@ -93,6 +93,7 @@ if st.button("Ask", type="primary"):
                         st.markdown(f"Price: **{product.get('Price', 'N/A')}**")
                         st.markdown(f"Discount: **{product.get('Discount', 'N/A')}**")
                         st.markdown(f"Return Type: **{product.get('Return Type', 'N/A')}**")
+                        st.markdown(f"SKU No: **{product.get('SKU', 'N/A')}**")
 
                         st.markdown('<button type="button">🛒 Add to Cart</button>', unsafe_allow_html=True)
         else:
