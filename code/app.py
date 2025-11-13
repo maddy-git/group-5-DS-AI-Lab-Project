@@ -15,4 +15,5 @@ def handle_query():
 if __name__ == '__main__':
     # This is for running locally during development
     # In a production environment, you would use a production-ready WSGI server
-    app.run(debug=True)
+    # app.run(debug=True)
+     app.run(host="0.0.0.0", port=5000, debug=True)
