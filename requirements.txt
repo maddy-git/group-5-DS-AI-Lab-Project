@@ -16,3 +16,4 @@ langchain-groq
 langchain-classic
 pydantic
 gunicorn
+gdown
