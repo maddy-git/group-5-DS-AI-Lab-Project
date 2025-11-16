@@ -1,0 +1,5 @@
+services:
+  - type: web
+    name: backend
+    env: python
+    startCommand: "cd code && gunicorn app:app"
