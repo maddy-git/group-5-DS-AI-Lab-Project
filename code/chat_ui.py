@@ -7,7 +7,7 @@ user_input = st.text_input("Ask your question:", placeholder="e.g., What goes we
 
 if st.button("Ask"):
     with st.spinner("Thinking..."):
-        res = requests.post("http://127.0.0.1:5000/query", json={"query": user_input})
+        res = requests.post(" https://myfashion-481842609060.us-central1.run.app", json={"query": user_input})
         if res.status_code == 200:
             answer = res.json().get("response", "")
             print(res.json())
