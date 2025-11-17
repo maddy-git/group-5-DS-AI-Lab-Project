@@ -1,3 +1,6 @@
+from .prompts import refinePrompts, rerankerPrompts, otherPrompts
+import os
+from langchain_google_genai import ChatGoogleGenerativeAI
 # ----------------------------------------------------
 # GCS Configuration
 # ----------------------------------------------------
@@ -31,3 +34,19 @@ DF_CLOTH_PARQUET_KEY = 'df_cloth_parquet'
 DF_CLOTH_CSV_KEY = 'df_cloth_csv'
 DF_CUSTOMERS_KEY = 'df_customers'
 DF_TRANSACTIONS_KEY = 'df_transactions'
+
+
+
+structured_response_prompt = otherPrompts.structured_response_prompt
+
+# Hyperparameters - Product RAG
+temp = 0.8
+top_k = 20
+refine_prompt = refinePrompts.refine_prompt_creative
+reranker_prompt = rerankerPrompts.rerank_prompt_creative
+refine_prompt_name = "refine_prompt_creative"
+reranker_prompt_name = "rerank_prompt_creative"
+
+#os.environ["GOOGLE_API_KEY"] = ""
+os.environ["GOOGLE_API_KEY"] = ""
+llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=temp)
