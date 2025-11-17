@@ -1,56 +1,33 @@
-from .prompts import refinePrompts, rerankerPrompts, otherPrompts
-import os
-from langchain_google_genai import ChatGoogleGenerativeAI
-from code.constants import (
-    CLOTH_PARQUET_PATH, CUSTOMERS_CSV_PATH, TRANSACTIONS_CSV_PATH,
-    PRODUCT_EMBEDDING_PATH, GCS_BASE # Import the GCS_BASE if needed for general paths
-)
+# ----------------------------------------------------
+# GCS Configuration
+# ----------------------------------------------------
+# The base bucket name
+BUCKET_NAME = "group-5-ai-data"
+
+# The common prefix for all data files
+GCS_DATA_BASE = f"gs://{BUCKET_NAME}/data"
+
+# Define the full GCS paths for all data files
+CLOTH_CSV_PATH = f"{GCS_DATA_BASE}/cloth_test_set.csv"
+CLOTH_PARQUET_PATH = f"{GCS_DATA_BASE}/cloth_test_set.parquet"
+CUSTOMERS_CSV_PATH = f"{GCS_DATA_BASE}/customers_first_3000.csv"
+TRANSACTIONS_CSV_PATH = f"{GCS_DATA_BASE}/transactions_first_3000_customers.csv"
+
+# Assuming the FAISS index and product embedding files are also in the data folder
+PRODUCT_EMBEDDING_PATH = f"{GCS_DATA_BASE}/cloth_products_bge_embedded.parquet"
+PRODUCT_FAISS_INDEX_PATH = f"{GCS_DATA_BASE}/product_index_on_text_only.faiss"
+
+# Path for the images folder (used to construct public URLs in chat_flow.py)
+# NOTE: The public access URL uses 'https://storage.googleapis.com/'
+GCS_IMAGES_FOLDER = f"{BUCKET_NAME}/data/images/h-and-m-personalized-fashion-recommendations/images"
+PUBLIC_IMAGES_BASE_URL = f"https://storage.googleapis.com/{GCS_IMAGES_FOLDER}"
+
 
 # ----------------------------------------------------
-# 1. GCS PATHS (Use the variables defined in constants.py)
+# DataFrame Dictionary Keys for Consistent Access
 # ----------------------------------------------------
-
-# These should now point to your GCS paths
-product_dir = CLOTH_PARQUET_PATH             # Assuming this refers to the source data
-customers_dir = CUSTOMERS_CSV_PATH
-transactions_dir = TRANSACTIONS_CSV_PATH
-product_embedding_dir = PRODUCT_EMBEDDING_PATH
-
-# Update the images directory path to use GCS format
-# NOTE: Ensure the images are stored at this GCS location.
-images_dir = f"{GCS_BASE}/images/h-and-m-personalized-fashion-recommendations/images"
-
-# Update FAISS index paths to use GCS
-# NOTE: The FAISS index files must also be stored in your GCS bucket.
-product_faiss_index_dir = f"{GCS_BASE}/product_index_on_text_only.faiss"
-product_faiss_dir = f"{GCS_BASE}/products_with_meta.parquet"
-
-structured_response_prompt = otherPrompts.structured_response_prompt
-
-# ----------------------------------------------------
-# 2. Hyperparameters
-# ----------------------------------------------------
-temp = 0.5
-top_k = 12
-refine_prompt = refinePrompts.refine_prompt_balanced
-reranker_prompt = rerankerPrompts.rerank_prompt_balanced
-refine_prompt_name = "refine_prompt_balanced"
-reranker_prompt_name = "rerank_prompt_balanced"
-
-# ----------------------------------------------------
-# 3. LLM Configuration (Secure)
-# ----------------------------------------------------
-
-# IMPORTANT SECURITY CHANGE: 
-# 1. Delete the hardcoded API key assignment.
-# os.environ["GOOGLE_API_KEY"] = "AIzaSyBfCV-TobP0xCdhrLvcZwbjSrIWjo03CX8" 
-
-# 2. Instead, you MUST use a secure method:
-#    a) If you are using the Gemini API key (AIza...), set it securely in the 
-#       Cloud Run UI under the "Variables" tab (Recommended for simplicity).
-#    b) If you are using the Cloud Run Service Account (recommended for security),
-#       you will need to use a different client library (e.g., Google GenAI SDK for Vertex AI) 
-#       or ensure the Service Account is authorized for the Gemini API.
-
-# We assume the API key is set externally in the Cloud Run environment variables.
-llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=temp)
+# These keys should be used to access dataframes loaded into the dictionary in app.py
+DF_CLOTH_PARQUET_KEY = 'df_cloth_parquet' 
+DF_CLOTH_CSV_KEY = 'df_cloth_csv'
+DF_CUSTOMERS_KEY = 'df_customers'
+DF_TRANSACTIONS_KEY = 'df_transactions'
