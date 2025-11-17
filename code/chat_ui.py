@@ -45,7 +45,7 @@ if st.button("Ask", type="primary"):
     with st.spinner("Talking to AI..."):
         try:
             # 🎯 Connect to the Flask backend on localhost
-            res = requests.post("http://127.0.0.1:5000/query", json={"query": user_input})
+            res = requests.post(" https://myfashion-481842609060.us-central1.run.app", json={"query": user_input})
 
             if res.status_code == 200:
                 data = res.json()
