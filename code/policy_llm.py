@@ -5,6 +5,7 @@ from sentence_transformers import SentenceTransformer
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate
 from productRAG.constants import llm
+from policyRAG.fetch_response import format_rag_context_for_llm
 
 EMBEDDING_MODEL_NAME = "BAAI/bge-base-en-v1.5" # The requested model for embeddings
 model = SentenceTransformer(EMBEDDING_MODEL_NAME)
@@ -34,23 +35,12 @@ prompt = ChatPromptTemplate.from_template(template)
 # --- 3. Build the Chain ---
 rag_chain = prompt | llm | StrOutputParser()
 
-def retrieve_policy(query):
-    # Generate embedding for the sample question
-    question_embedding = model.encode(query, convert_to_tensor=False)
-    collection = client.get_collection(name="faq_and_policy")
 
-    # Query the collection to find similar documents
-    results = collection.query(
-        query_embeddings=question_embedding.tolist(),
-        n_results=3  # Get the top 3 most similar results
-    )
-
-    return results['documents'][0]
 
 def answer_policy_or_return_query(query, history):
     response = rag_chain.invoke({
         "history": history,
-        "context": retrieve_policy(query),
+        "context": format_rag_context_for_llm(query),
         "query": query
     })
 
