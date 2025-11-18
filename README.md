@@ -4,6 +4,9 @@
 
 ---
 
+#DEMO LINK: https://drive.google.com/file/d/1gtPHSeH2PL2NkLydlRJ0gGXaOov4M2Az/view?usp=sharing
+---
+
 ## Project Title and Overview
 AI Stylist is a Retrieval-Augmented Generation (RAG) based system that improves the performance of Large Language Models (LLMs) using text-based product details extracted from images.  
 It embeds product descriptions, stores them using **FAISS**, and retrieves the most relevant data to generate context-aware and accurate recommendations.

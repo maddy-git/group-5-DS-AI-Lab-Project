@@ -958,7 +958,7 @@ Product 1:
 • Price: 4681 INR
 • Discount: 0%
 • Return Type: 7 days return
-• SKU: 558961001
+• SKU: 558961001,
 
 Product 2:
 • Name: BD check Gerald
@@ -967,7 +967,7 @@ Product 2:
 • Price: 2362 INR
 • Discount: 10%
 • Return Type: No return
-• SKU: 495725005
+• SKU: 495725005,
 
 Product 3:
 • Name: BD check Gerald TVP

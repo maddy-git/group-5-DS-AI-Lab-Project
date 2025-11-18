@@ -10,7 +10,7 @@ from policyRAG.fetch_response import format_rag_context_for_llm
 EMBEDDING_MODEL_NAME = "BAAI/bge-base-en-v1.5" # The requested model for embeddings
 model = SentenceTransformer(EMBEDDING_MODEL_NAME)
 
-client = chromadb.PersistentClient(path=os.getcwd()+ "/chroma_db_storage")
+client = chromadb.PersistentClient(path=os.getcwd()+ "/code/chroma_db_storage")
 
 # --- 1. Define the Prompt Template ---
 template = """

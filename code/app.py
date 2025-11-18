@@ -13,6 +13,4 @@ def handle_query():
     return jsonify({"response": llm_response, "images":images}),200
 
 if __name__ == '__main__':
-    # This is for running locally during development
-    # In a production environment, you would use a production-ready WSGI server
     app.run(debug=True)
