@@ -23,6 +23,8 @@ To build a system that recommends products by retrieving relevant text-based inf
 - [Milestone 2: Dataset Preparation]([docs/milestone2_implementation.pdf](https://github.com/maddy-git/group-5-DS-AI-Lab-Project/tree/main/milestones/milestone-2)) – This milestone had details about us choosing a dataset, and performing analysis on it.  
 - [Milestone 3: Model Architecture](docs/milestone3_final_report.pdf) – The third milestone had intricate details about the RAG (Retrieval Augmented Generation) method and a handful of embedding models to compare their strengths and weaknesses.
 - [Milestone 4: Model Training](https://github.com/maddy-git/group-5-DS-AI-Lab-Project/tree/main/milestones/milestone-4) - This milestone focuses on the implementation of the complete AI Stylist architecture, as outlined in the previously demonstrated flowchart. It builds upon the work from earlier milestones to integrate all components — from data preprocessing to query handling and product recommendation — into a functional end-to-end system.
+- [Milestone 5: System Integration, Evaluation, and Refinements](https://github.com/maddy-git/group-5-DS-AI-Lab-Project/tree/main/milestones/milestone-5) – This milestone documents the integrated pipeline, evaluation results, and final refinements to improve reliability and performance.
+- [Milestone 6: Final Documentation & Report](https://github.com/maddy-git/group-5-DS-AI-Lab-Project/tree/main/milestones/milestone-6) – Contains the comprehensive documentation and the final project report summarizing the end-to-end system and outcomes.
 
 ---
 
@@ -113,6 +115,14 @@ Environment: Python 3.9+, dependencies in requirements.txt.
 Reproducibility: Use the same embeddings and FAISS index.
 
 Notebooks: Notebooks are not needed for running it.
+
+---
+
+## Running on GCP (Streamlit)
+Use this command to run the Streamlit app on a GCP VM and expose it publicly on port 8501.
+```bash
+streamlit run code/chat_ui.py --server.address=0.0.0.0 --server.port=8501
+```
 
 ---
 
