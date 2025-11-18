@@ -1,4 +1,4 @@
-from .embed_prompt import keyword_prompt
+from embed_prompt import keyword_prompt
 from openai import OpenAI
 
 GROQ_API_KEY=""

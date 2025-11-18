@@ -11,7 +11,7 @@ client = chromadb.Client()
 # Load the embedding model
 EMBED_MODEL = "BAAI/bge-base-en-v1.5"
 model = SentenceTransformer(EMBED_MODEL)
-PDF_PATH = "/home/wizard/projects/group-5-DS-AI-Lab-Project/code/content/faq_and_policy-v2.pdf"
+PDF_PATH = "/home/wizard/projects/group-5-DS-AI-Lab-Project/code/content/faq_and_policy-v3.pdf"
 COLLECTION_NAME = "policy_docs"
 
 
