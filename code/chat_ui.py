@@ -32,18 +32,60 @@ st.title("👗 AI Fashion Chatbot")
 
 # --- Chat Interface ---
 user_input = st.text_input("Ask your question:", placeholder="e.g., What goes well with a red shirt for summer?")
-# Initialize chat history
-if "messages" not in st.session_state:
-    st.session_state.messages = []
 
-if st.button("Ask"):
-    with st.spinner("Thinking..."):
-        res = requests.post("http://127.0.0.1:5000/query", json={"query": user_input})
-        if res.status_code == 200:
-            answer = res.json().get("response", "")
-            print(res.json().get("response", ""))
-            if answer:
-                st.write(f"AI Stylist:{answer}")
+if st.button("Ask", type="primary"):
+    if not user_input:
+        st.warning("Please enter a question first.")
+        # Stop processing if no input
+        st.stop()
+
+    answer = ""
+    products = []
+
+    with st.spinner("Talking to AI..."):
+        try:
+            # 🎯 Connect to the Flask backend on localhost
+            res = requests.post("http://127.0.0.1:5000/query", json={"query": user_input})
+
+            if res.status_code == 200:
+                data = res.json()
+
+                # 1. Extract the plain text response from the 'response' key
+                answer = data.get("response")
+                if ("Product 1" in answer):
+                    products = parse_products(answer)
+                    images = data.get("images", [])
+                    for i in range(len(images)):
+                        products[i]['url'] = images[i]
+
+            else:
+                st.error(f"Backend call failed. Status code: {res.status_code}. Response: {res.text}")
+
+        except requests.exceptions.ConnectionError:
+            st.error("Could not connect to the backend server. Please ensure your Flask app is running")
+        except json.JSONDecodeError:
+            st.error("Failed to parse JSON response from backend. Check the server's output.")
+
+        if products:
+            st.subheader("🛍️ Recommended Styles")
+
+            # Use 3 columns for the product grid
+            num_cols = 3
+            cols = st.columns(num_cols)
+
+            for i, product in enumerate(products):
+                # Cycle through the columns for a grid layout
+                with cols[i % num_cols]:
+                    with st.container(border=True):
+
+                        try:
+                            st.image(
+                                product.get("url", ""),
+                                caption=product.get("name", "Product"),
+                                use_container_width=True
+                            )
+                        except Exception as e:
+                            print("Unable to fetch image")
 
                         st.markdown(f"**{product.get('Name', 'N/A')}**")
                         st.markdown(f"Type: **{product.get('Type', 'N/A')}**")

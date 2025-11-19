@@ -16,7 +16,11 @@ client = chromadb.PersistentClient(path=os.getcwd()+ "/code/chroma_db_storage")
 template = """
     **System Instructions:**
     You are an expert Question-Answering assistant. Your goal is to answer the final "User Query" based *only* on the provided "Relevant Context Chunks" and the "Conversation History." Do not use external knowledge.
+    If asked about previous purchases, if product purchased is present in context, you can use that to answer, also use other information from customer context if necessary.
 
+    **Customer Context:**
+    {customer_context}
+    
     **Conversation History:**
     {history}
 
@@ -37,9 +41,10 @@ rag_chain = prompt | llm | StrOutputParser()
 
 
 
-def answer_policy_or_return_query(query, history):
+def answer_policy_or_return_query(query, history, customer_context):
     response = rag_chain.invoke({
         "history": history,
+        "customer_context": customer_context,
         "context": format_rag_context_for_llm(query),
         "query": query
     })
