@@ -3,6 +3,7 @@ from sentence_transformers import SentenceTransformer
 import fitz # PyMuPDF
 import re
 from genrate_keywords import generate_keywords_from_chunk
+import os
 
 
 client = chromadb.Client()
@@ -11,7 +12,7 @@ client = chromadb.Client()
 # Load the embedding model
 EMBED_MODEL = "BAAI/bge-base-en-v1.5"
 model = SentenceTransformer(EMBED_MODEL)
-PDF_PATH = "/home/wizard/projects/group-5-DS-AI-Lab-Project/code/content/faq_and_policy-v3.pdf"
+PDF_PATH = os.getcwd() + "/code/content/faq_and_policy-v3.pdf"
 COLLECTION_NAME = "policy_docs"
 
 
@@ -62,7 +63,7 @@ policies = split_policies(pdf_content)
 # 5️⃣ Embed and store in ChromaDB
 def store_in_chromadb(policies):
     # Initialize ChromaDB client with persistence
-    db_path = "./chroma_db"
+    db_path = os.getcwd() + "/code/chroma_db"
     client = chromadb.PersistentClient(path=db_path)
 
     # Clear the existing collection before adding new data to ensure freshness

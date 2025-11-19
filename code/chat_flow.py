@@ -29,16 +29,18 @@ def trigger_flow(query):
 
     #RAG
     llm_response = ""
+
+    if (memory.get_customer_context() == ""):
+        customer_context = get_customer_context.build_customer_context(memory.get_customer())
+        memory.set_customer_context(customer_context)
+    else:
+        customer_context = memory.get_customer_context()
+
     images = []
     classification = classify_query.classify_query(query, memory.get_history())
     if classification == "POLICY" or classification == "RETURN":
-        llm_response = answer_policy_or_return_query(query, memory.get_history())
+        llm_response = answer_policy_or_return_query(query, memory.get_history(), customer_context)
     elif classification == "PRODUCT_SEARCH":
-        if(memory.get_customer_context() == ""):
-            customer_context = get_customer_context.build_customer_context(memory.get_customer())
-            memory.set_customer_context(customer_context)
-        else:
-            customer_context = memory.get_customer_context()
         top_products = findKBest.search_products(query, customer_context, memory.get_history())
         llm_response = reranker.recommend_top3_structured(query, customer_context, memory.get_history(), top_products)
         sku_list = re.findall(r'SKU:\s*(\d+)', llm_response)

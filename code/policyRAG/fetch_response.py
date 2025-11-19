@@ -1,6 +1,7 @@
 import chromadb
 from .genrate_keywords import generate_keywords_from_chunk
 from sentence_transformers import SentenceTransformer
+import os
 
 COLLECTION_NAME = "policy_docs"
 EMBED_MODEL = "BAAI/bge-base-en-v1.5"
@@ -8,7 +9,7 @@ model = SentenceTransformer(EMBED_MODEL)
 
 def retrieve_documents(user_query, n_results=3):
     # Initialize ChromaDB client with persistence
-    client = chromadb.PersistentClient(path="/home/wizard/projects/group-5-DS-AI-Lab-Project/code/chroma_db")
+    client = chromadb.PersistentClient(path= os.getcwd() + "/code/chroma_db")
     collection = client.get_or_create_collection(COLLECTION_NAME)
 
     # Generate keywords for the user query (this will call the LLM)
@@ -92,8 +93,3 @@ def format_rag_context_for_llm(query: str, max_chars: int = 800) -> str:
     """).strip()
 
     return final_prompt
-
-
-print("Retrieval function 'retrieve_documents' updated to use keywords.")
-
-print(format_rag_context_for_llm("what is the refund policy?"))
